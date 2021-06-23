@@ -57,10 +57,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-te-vNR">
-                                <rect key="frame" x="135" y="565" width="120" height="102"/>
+                                <rect key="frame" x="135" y="565" width="120" height="97"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-7S-vsd">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="53"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="48"/>
                                         <color key="backgroundColor" red="0.92855814199999998" green="0.64660257409999999" blue="0.33165538550000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="rlM-x1-tOz"/>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcS-NS-kjr">
-                                        <rect key="frame" x="35.666666666666657" y="72" width="48.666666666666657" height="30"/>
+                                        <rect key="frame" x="35.666666666666657" y="67" width="48.666666666666657" height="30"/>
                                         <state key="normal" title="FB登入"/>
                                     </button>
                                 </subviews>
@@ -83,35 +83,49 @@
                                     <constraint firstItem="FcS-NS-kjr" firstAttribute="leading" secondItem="zdH-te-vNR" secondAttribute="leading" constant="35.666666666666657" id="ifQ-XJ-Fl5"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-BW-2mM">
-                                <rect key="frame" x="160" y="767" width="70" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="會員註冊">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="joinEmail:" destination="WON-qf-DJF" eventType="touchUpInside" id="i20-SE-pWk"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="雲" translatesAutoresizingMaskIntoConstraints="NO" id="uwx-32-J6C">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="293" id="R5L-US-cg4"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="gHD-vm-lKq">
+                                <rect key="frame" x="160" y="726" width="70" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WI-u6-8JF">
+                                        <rect key="frame" x="16.666666666666657" y="0.0" width="37" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="登出">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sinOut:" destination="WON-qf-DJF" eventType="touchUpInside" id="Efv-Jl-C8d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-BW-2mM">
+                                        <rect key="frame" x="0.0" y="41" width="70" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="會員註冊">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="joinEmail:" destination="WON-qf-DJF" eventType="touchUpInside" id="i20-SE-pWk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KGF-54-Msr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zdH-te-vNR" firstAttribute="top" secondItem="xMV-XS-i6i" secondAttribute="top" constant="565" id="0qT-ku-y0d"/>
-                            <constraint firstItem="b8Q-BW-2mM" firstAttribute="top" secondItem="zdH-te-vNR" secondAttribute="bottom" constant="100" id="4DJ-5V-Y7e"/>
                             <constraint firstItem="uwx-32-J6C" firstAttribute="top" secondItem="xMV-XS-i6i" secondAttribute="top" id="BF6-p0-BKS"/>
                             <constraint firstItem="zdH-te-vNR" firstAttribute="centerX" secondItem="xMV-XS-i6i" secondAttribute="centerX" id="BJc-pb-RYq"/>
                             <constraint firstItem="S29-WQ-Xbz" firstAttribute="leading" secondItem="KGF-54-Msr" secondAttribute="leading" constant="20" id="Kz4-LD-yAS"/>
-                            <constraint firstItem="b8Q-BW-2mM" firstAttribute="centerX" secondItem="xMV-XS-i6i" secondAttribute="centerX" id="Rtv-qW-Gdm"/>
                             <constraint firstItem="S29-WQ-Xbz" firstAttribute="top" secondItem="uwx-32-J6C" secondAttribute="bottom" constant="60" id="Rvz-MW-h0a"/>
                             <constraint firstItem="uwx-32-J6C" firstAttribute="trailing" secondItem="KGF-54-Msr" secondAttribute="trailing" id="XAH-Ly-vfG"/>
-                            <constraint firstItem="KGF-54-Msr" firstAttribute="bottom" secondItem="b8Q-BW-2mM" secondAttribute="bottom" constant="10" id="c56-W9-X6r"/>
+                            <constraint firstItem="gHD-vm-lKq" firstAttribute="centerX" secondItem="xMV-XS-i6i" secondAttribute="centerX" id="Z13-xn-1By"/>
+                            <constraint firstItem="KGF-54-Msr" firstAttribute="bottom" secondItem="gHD-vm-lKq" secondAttribute="bottom" constant="10" id="Z65-48-r9v"/>
                             <constraint firstItem="zdH-te-vNR" firstAttribute="top" secondItem="S29-WQ-Xbz" secondAttribute="bottom" constant="30" id="kMh-6l-IVt"/>
                             <constraint firstItem="uwx-32-J6C" firstAttribute="leading" secondItem="KGF-54-Msr" secondAttribute="leading" id="s4V-Y9-3aV"/>
                             <constraint firstItem="KGF-54-Msr" firstAttribute="trailing" secondItem="S29-WQ-Xbz" secondAttribute="trailing" constant="20" id="sVK-hK-9Gj"/>

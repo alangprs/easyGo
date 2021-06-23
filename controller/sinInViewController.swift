@@ -7,6 +7,7 @@
 //登入畫面
 
 import UIKit
+import Firebase
 
 class sinInViewController: UIViewController {
     //帳號輸入
@@ -19,8 +20,44 @@ class sinInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    //彈跳出通知
+    func texAlert(title:String,message:String){
+        let conertller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "確定", style: .default, handler: nil)
+        conertller.addAction(action)
+        present(conertller, animated: true, completion: nil)
+    }
+    //mail 登入
+    func emailSinIn(){
+        Auth.auth().signIn(withEmail: sinInEmailTextField.text!, password: sinInPassWordTextField.text!) { result, error in
+            guard let user = result?.user else {
+                //登入失敗執行
+                if let error = error{
+                    self.texAlert(title: "登入失敗", message: "\(error.localizedDescription)")
+                }
+                print("登入失敗",error?.localizedDescription)
+                return
+            }
+            //登入成功執行
+            print("登入成功")
+        }
+    }
+    //登出
+    func sinOut(){
+        do {
+            try Auth.auth().signOut()
+            texAlert(title: "已登出", message: "等你回來")
+            print("已登出")
+        } catch {
+            texAlert(title: "登出失敗", message: "\(error.localizedDescription)")
+            print("登出失敗",error.localizedDescription)
+        }
+    }
+    
+    
     //開始按鈕
     @IBAction func sinIn(_ sender: UIButton) {
+        emailSinIn()
     }
     //會員註冊按鈕
     @IBAction func joinEmail(_ sender: UIButton) {
@@ -28,6 +65,10 @@ class sinInViewController: UIViewController {
             controller.modalPresentationStyle = .fullScreen //變成全畫面模式
             present(controller, animated: true, completion: nil)
         }
+    }
+    //登出
+    @IBAction func sinOut(_ sender: Any) {
+        sinOut()
     }
     
     
