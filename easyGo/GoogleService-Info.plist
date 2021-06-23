@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>784492387361-56da1pcttdu5gqqo9o8ev9a0119nt3mj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.784492387361-56da1pcttdu5gqqo9o8ev9a0119nt3mj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCf7x5lqTZeSZpu0EMPNrb4CFPiY3kEa3A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>784492387361</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.will.easyGo</string>
+	<key>PROJECT_ID</key>
+	<string>easygo-f7da4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>easygo-f7da4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:784492387361:ios:5b71484d5d8ed8b6a11760</string>
+</dict>
+</plist>

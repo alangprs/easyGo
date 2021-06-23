@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p10-BJ-ICk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WON-qf-DJF">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,7 +11,7 @@
         <!--Sin In View Controller-->
         <scene sceneID="BaJ-8Y-M1H">
             <objects>
-                <viewController id="WON-qf-DJF" customClass="sinInViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sinInViewController" id="WON-qf-DJF" customClass="sinInViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xMV-XS-i6i">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +69,9 @@
                                         <state key="normal" title="登入">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sinIn:" destination="WON-qf-DJF" eventType="touchUpInside" id="L0g-rs-c6e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcS-NS-kjr">
                                         <rect key="frame" x="35.666666666666657" y="72" width="48.666666666666657" height="30"/>
@@ -86,6 +89,9 @@
                                 <state key="normal" title="會員註冊">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="joinEmail:" destination="WON-qf-DJF" eventType="touchUpInside" id="i20-SE-pWk"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="雲" translatesAutoresizingMaskIntoConstraints="NO" id="uwx-32-J6C">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="293"/>
@@ -111,10 +117,103 @@
                             <constraint firstItem="KGF-54-Msr" firstAttribute="trailing" secondItem="S29-WQ-Xbz" secondAttribute="trailing" constant="20" id="sVK-hK-9Gj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sinInEmailTextField" destination="ao9-e9-k6a" id="g8i-Pr-NFc"/>
+                        <outlet property="sinInPassWordTextField" destination="Lr8-6v-jdN" id="lkc-zz-M2X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="me2-ek-mY9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-218.46153846153845" y="119.43127962085308"/>
+        </scene>
+        <!--Join View Controller-->
+        <scene sceneID="FbW-Je-bts">
+            <objects>
+                <viewController storyboardIdentifier="joinViewController" id="Fbv-Oq-XF6" customClass="joinViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5kU-bz-m6h">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="雲" translatesAutoresizingMaskIntoConstraints="NO" id="HUu-ub-r1d">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="JQe-EQ-aAC"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="udB-K3-sCW">
+                                <rect key="frame" x="20" y="353" width="350" height="173"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XpI-3U-gzS">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="72"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJC-zY-m9j">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="填入Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRv-BC-Nan">
+                                                <rect key="frame" x="0.0" y="38" width="350" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="E8C-57-1MY">
+                                        <rect key="frame" x="0.0" y="102" width="350" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os0-Yb-yyG">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="填入密碼" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pe8-OO-MyW">
+                                                <rect key="frame" x="0.0" y="37" width="350" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyb-gy-aAQ">
+                                <rect key="frame" x="135" y="585" width="120" height="48"/>
+                                <color key="backgroundColor" red="0.92855814199999998" green="0.64660257409999999" blue="0.33165538550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="GhN-h5-bmz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="註冊">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="join:" destination="Fbv-Oq-XF6" eventType="touchUpInside" id="bpM-sS-cuN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y3G-Vq-jNe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y3G-Vq-jNe" firstAttribute="trailing" secondItem="kyb-gy-aAQ" secondAttribute="trailing" constant="135" id="14P-Iz-Ejd"/>
+                            <constraint firstItem="HUu-ub-r1d" firstAttribute="top" secondItem="5kU-bz-m6h" secondAttribute="top" id="AoH-MT-bqN"/>
+                            <constraint firstItem="kyb-gy-aAQ" firstAttribute="top" secondItem="udB-K3-sCW" secondAttribute="bottom" constant="59" id="Bgy-7s-0M7"/>
+                            <constraint firstItem="udB-K3-sCW" firstAttribute="top" secondItem="HUu-ub-r1d" secondAttribute="bottom" constant="60" id="ZsR-9O-7Vs"/>
+                            <constraint firstItem="y3G-Vq-jNe" firstAttribute="leading" secondItem="HUu-ub-r1d" secondAttribute="leading" id="bCQ-1L-0fm"/>
+                            <constraint firstItem="y3G-Vq-jNe" firstAttribute="trailing" secondItem="udB-K3-sCW" secondAttribute="trailing" constant="20" id="n4w-9R-Q1Q"/>
+                            <constraint firstItem="y3G-Vq-jNe" firstAttribute="trailing" secondItem="HUu-ub-r1d" secondAttribute="trailing" id="n8N-ob-jUB"/>
+                            <constraint firstItem="kyb-gy-aAQ" firstAttribute="leading" secondItem="y3G-Vq-jNe" secondAttribute="leading" constant="135" id="q42-sF-6Yk"/>
+                            <constraint firstItem="udB-K3-sCW" firstAttribute="leading" secondItem="y3G-Vq-jNe" secondAttribute="leading" constant="20" id="qTb-lz-r5o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="joinEmailTextField" destination="tRv-BC-Nan" id="lXi-My-InO"/>
+                        <outlet property="joinPassWordTextField" destination="pe8-OO-MyW" id="nC0-FM-9mZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdB-PY-kJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218.46153846153845" y="833.88625592417054"/>
         </scene>
         <!--List Table View Controller-->
         <scene sceneID="dJh-Ph-rng">
@@ -352,7 +451,7 @@
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-WS-c3P">
                                                             <rect key="frame" x="0.0" y="38" width="350" height="296"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <mutableString key="text">鎮西堡部落
+                                                            <string key="text">鎮西堡部落
 鎮西堡部落有著豐富的原始森林，海拔高度近2000公尺，長年被雲霧所繚繞，在這裡世代居住的泰雅居民以檜木神木群守護人自居，在他們的守護下，檜木神木群得以躲過外人砍伐，延續數千年甚至更久的生命之河。
 檜木神木群共有A、B區兩條步道，B區是一條較親民的環狀步道，繞一圈便可以把神木群美景一覽無遺，這裡的檜木神木群拼命往天空延展，個個有著獨特的枝貌型態，有的神木因為形態十分特別，還被取了諸如亞當、夏娃、國王，甚至是丸子三兄弟等等的有趣名稱呢！
 
@@ -360,7 +459,7 @@
 佇立在大漢溪中的軍艦岩，是一座在大漢溪谷中的巨大岩石，三角尖形的岩石有如大型軍艦的船頭，搭配船身下湍急的溪水，彷彿是一艘大型的軍艦正緩緩的駛入碼頭，因此被命名為擁有萬千氣勢的「軍艦岩」。登山吊橋是觀賞軍艦岩的最佳賞景點，不僅可以看見軍艦岩的全貌，還可俯瞰整個溪谷的秀麗景色。
 
 泰崗部落水蜜桃
-位於尖石鄉秀巒村的泰崗部落，古名Pngyan Wagi，泰雅族語的意思就是「全日照之地」，日照時間平均長達10小時，且溫差10度以上、土壤肥沃，加上常年霧氣迷漫，非常適合水蜜桃栽培及生長，所生產的水蜜桃不但富含水分、色澤白中帶粉紅，肉質細緻香味濃郁，品質與口感都是上選！</mutableString>
+位於尖石鄉秀巒村的泰崗部落，古名Pngyan Wagi，泰雅族語的意思就是「全日照之地」，日照時間平均長達10小時，且溫差10度以上、土壤肥沃，加上常年霧氣迷漫，非常適合水蜜桃栽培及生長，所生產的水蜜桃不但富含水分、色澤白中帶粉紅，肉質細緻香味濃郁，品質與口感都是上選！</string>
                                                             <color key="textColor" systemColor="labelColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

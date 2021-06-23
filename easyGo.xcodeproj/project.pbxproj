@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D65A19226831D9400783BC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D65A19126831D9300783BC5 /* GoogleService-Info.plist */; };
+		4D65A19426831F2100783BC5 /* joinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65A19326831F2100783BC5 /* joinViewController.swift */; };
 		4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D42681B5B60084D587 /* AppDelegate.swift */; };
 		4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */; };
 		4DE4A3DC2681B5B60084D587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE4A3DA2681B5B60084D587 /* Main.storyboard */; };
@@ -16,9 +18,13 @@
 		4DE4A3EC2681B5DF0084D587 /* sinInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3EB2681B5DF0084D587 /* sinInViewController.swift */; };
 		4DE4A3EF2681C2770084D587 /* listTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3EE2681C2770084D587 /* listTableViewController.swift */; };
 		4DE4A3F12681C83F0084D587 /* orderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3F02681C83F0084D587 /* orderTableViewController.swift */; };
+		AE3F9269BD58221DFD2BF050 /* Pods_easyGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC40723EC431029D0060D20 /* Pods_easyGo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29CB990A5DD5C1BC8619229F /* Pods-easyGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyGo.release.xcconfig"; path = "Target Support Files/Pods-easyGo/Pods-easyGo.release.xcconfig"; sourceTree = "<group>"; };
+		4D65A19126831D9300783BC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D65A19326831F2100783BC5 /* joinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinViewController.swift; sourceTree = "<group>"; };
 		4DE4A3D12681B5B60084D587 /* easyGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE4A3D42681B5B60084D587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		4DE4A3EB2681B5DF0084D587 /* sinInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sinInViewController.swift; sourceTree = "<group>"; };
 		4DE4A3EE2681C2770084D587 /* listTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listTableViewController.swift; sourceTree = "<group>"; };
 		4DE4A3F02681C83F0084D587 /* orderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderTableViewController.swift; sourceTree = "<group>"; };
+		DEC40723EC431029D0060D20 /* Pods_easyGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_easyGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85D8AB334691CF7C9528BCD /* Pods-easyGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyGo.debug.xcconfig"; path = "Target Support Files/Pods-easyGo/Pods-easyGo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,18 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3F9269BD58221DFD2BF050 /* Pods_easyGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492911F3D6C1902BC20D1F7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F85D8AB334691CF7C9528BCD /* Pods-easyGo.debug.xcconfig */,
+				29CB990A5DD5C1BC8619229F /* Pods-easyGo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		49AA8B10FB322C3F424BEBD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEC40723EC431029D0060D20 /* Pods_easyGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4DE4A3C82681B5B60084D587 = {
 			isa = PBXGroup;
 			children = (
 				4DE4A3ED2681B5E30084D587 /* controller */,
 				4DE4A3D32681B5B60084D587 /* easyGo */,
 				4DE4A3D22681B5B60084D587 /* Products */,
+				492911F3D6C1902BC20D1F7C /* Pods */,
+				49AA8B10FB322C3F424BEBD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +97,7 @@
 				4DE4A3E02681B5BB0084D587 /* Assets.xcassets */,
 				4DE4A3E22681B5BB0084D587 /* LaunchScreen.storyboard */,
 				4DE4A3E52681B5BB0084D587 /* Info.plist */,
+				4D65A19126831D9300783BC5 /* GoogleService-Info.plist */,
 				4DE4A3DD2681B5B60084D587 /* easyGo.xcdatamodeld */,
 			);
 			path = easyGo;
@@ -80,6 +109,7 @@
 				4DE4A3EB2681B5DF0084D587 /* sinInViewController.swift */,
 				4DE4A3EE2681C2770084D587 /* listTableViewController.swift */,
 				4DE4A3F02681C83F0084D587 /* orderTableViewController.swift */,
+				4D65A19326831F2100783BC5 /* joinViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -91,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DE4A3E82681B5BB0084D587 /* Build configuration list for PBXNativeTarget "easyGo" */;
 			buildPhases = (
+				2A2611E220693B368FA34E15 /* [CP] Check Pods Manifest.lock */,
 				4DE4A3CD2681B5B60084D587 /* Sources */,
 				4DE4A3CE2681B5B60084D587 /* Frameworks */,
 				4DE4A3CF2681B5B60084D587 /* Resources */,
+				9F546A1C5A7BEAC8A51C52C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE4A3E42681B5BB0084D587 /* LaunchScreen.storyboard in Resources */,
+				4D65A19226831D9400783BC5 /* GoogleService-Info.plist in Resources */,
 				4DE4A3E12681B5BB0084D587 /* Assets.xcassets in Resources */,
 				4DE4A3DC2681B5B60084D587 /* Main.storyboard in Resources */,
 			);
@@ -149,12 +182,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A2611E220693B368FA34E15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-easyGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F546A1C5A7BEAC8A51C52C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-easyGo/Pods-easyGo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-easyGo/Pods-easyGo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-easyGo/Pods-easyGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DE4A3CD2681B5B60084D587 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4DE4A3F12681C83F0084D587 /* orderTableViewController.swift in Sources */,
+				4D65A19426831F2100783BC5 /* joinViewController.swift in Sources */,
 				4DE4A3EC2681B5DF0084D587 /* sinInViewController.swift in Sources */,
 				4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */,
 				4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */,
@@ -303,6 +379,7 @@
 		};
 		4DE4A3E92681B5BB0084D587 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F85D8AB334691CF7C9528BCD /* Pods-easyGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +399,7 @@
 		};
 		4DE4A3EA2681B5BB0084D587 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29CB990A5DD5C1BC8619229F /* Pods-easyGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
