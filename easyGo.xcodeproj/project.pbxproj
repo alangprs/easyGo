@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4D65A19226831D9400783BC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D65A19126831D9300783BC5 /* GoogleService-Info.plist */; };
 		4D65A19426831F2100783BC5 /* joinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65A19326831F2100783BC5 /* joinViewController.swift */; };
+		4D65A1BE268367F800783BC5 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 4D65A1BD268367F800783BC5 /* FacebookLogin */; };
 		4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D42681B5B60084D587 /* AppDelegate.swift */; };
 		4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */; };
 		4DE4A3DC2681B5B60084D587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE4A3DA2681B5B60084D587 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D65A1BE268367F800783BC5 /* FacebookLogin in Frameworks */,
 				AE3F9269BD58221DFD2BF050 /* Pods_easyGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +134,9 @@
 			dependencies = (
 			);
 			name = easyGo;
+			packageProductDependencies = (
+				4D65A1BD268367F800783BC5 /* FacebookLogin */,
+			);
 			productName = easyGo;
 			productReference = 4DE4A3D12681B5B60084D587 /* easyGo.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 4DE4A3C82681B5B60084D587;
+			packageReferences = (
+				4D65A1BC268367F800783BC5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 4DE4A3D22681B5B60084D587 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -439,6 +447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D65A1BC268367F800783BC5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D65A1BD268367F800783BC5 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D65A1BC268367F800783BC5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4DE4A3DD2681B5B60084D587 /* easyGo.xcdatamodeld */ = {

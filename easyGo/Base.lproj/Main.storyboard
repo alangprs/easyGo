@@ -57,14 +57,11 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-te-vNR">
-                                <rect key="frame" x="135" y="565" width="120" height="97"/>
+                                <rect key="frame" x="120" y="565" width="150" height="97"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-7S-vsd">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-7S-vsd">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="48"/>
                                         <color key="backgroundColor" red="0.92855814199999998" green="0.64660257409999999" blue="0.33165538550000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="rlM-x1-tOz"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="登入">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,14 +70,19 @@
                                             <action selector="sinIn:" destination="WON-qf-DJF" eventType="touchUpInside" id="L0g-rs-c6e"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcS-NS-kjr">
-                                        <rect key="frame" x="35.666666666666657" y="67" width="48.666666666666657" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcS-NS-kjr">
+                                        <rect key="frame" x="0.0" y="67" width="150" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="jDP-uV-J2s"/>
+                                        </constraints>
                                         <state key="normal" title="FB登入"/>
+                                        <connections>
+                                            <action selector="fbSinIn:" destination="WON-qf-DJF" eventType="touchUpInside" id="pLs-hn-K3X"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="lcj-7S-vsd" firstAttribute="leading" secondItem="zdH-te-vNR" secondAttribute="leading" id="XHm-O5-RZS"/>
-                                    <constraint firstItem="FcS-NS-kjr" firstAttribute="leading" secondItem="zdH-te-vNR" secondAttribute="leading" constant="35.666666666666657" id="ifQ-XJ-Fl5"/>
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="雲" translatesAutoresizingMaskIntoConstraints="NO" id="uwx-32-J6C">
@@ -232,7 +234,7 @@
         <!--List Table View Controller-->
         <scene sceneID="dJh-Ph-rng">
             <objects>
-                <tableViewController id="RCD-bf-6Yx" customClass="listTableViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="listTableViewController" id="RCD-bf-6Yx" customClass="listTableViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Poh-To-jwD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
