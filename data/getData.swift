@@ -19,7 +19,7 @@ struct Fields:Decodable {
     let price:Int
     let tripDetel:String
     let name:String
-    let tripDate:Int
+    let tripDay:Int
     let image:URL
     let tirpDate:String
     let ltineraryContent:String

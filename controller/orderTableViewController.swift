@@ -59,8 +59,21 @@ class orderTableViewController: UITableViewController {
         personPrice.text = "每人\(oderData.fields.price)元" //顯示讀到的單人金額
         totlePrice.text = "總金額：\(oderData.fields.price)元" //顯示總金額
     }
+    
+    //alert通知
+    func confirmAlert(){
+        let controller = UIAlertController(title: "是否送出訂單？", message:"行程名稱:\(oderData.fields.name) \n 人數:\(peopleSanderValue!) \n 行程日期:\(oderData.fields.tirpDate) \n總金額:\(priceSum!)" , preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "確認", style: .default) { _ in
+            print("跳下一頁")
+        }
+        let noAction = UIAlertAction(title: "取消", style: .default, handler: nil)
+        controller.addAction(yesAction)
+        controller.addAction(noAction)
+        present(controller, animated: true, completion: nil)
+    }
     //購買按鈕
     @IBAction func confirm(_ sender: Any) {
+        confirmAlert()
     }
     
     //人數選擇
