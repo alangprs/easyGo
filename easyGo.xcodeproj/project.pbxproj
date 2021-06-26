@@ -10,6 +10,8 @@
 		4D65A19226831D9400783BC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D65A19126831D9300783BC5 /* GoogleService-Info.plist */; };
 		4D65A19426831F2100783BC5 /* joinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65A19326831F2100783BC5 /* joinViewController.swift */; };
 		4D65A1BE268367F800783BC5 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 4D65A1BD268367F800783BC5 /* FacebookLogin */; };
+		4D65A1E72684B6B700783BC5 /* getData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65A1E62684B6B700783BC5 /* getData.swift */; };
+		4D65A1EA2684C80900783BC5 /* listTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65A1E92684C80900783BC5 /* listTableViewCell.swift */; };
 		4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D42681B5B60084D587 /* AppDelegate.swift */; };
 		4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */; };
 		4DE4A3DC2681B5B60084D587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE4A3DA2681B5B60084D587 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		29CB990A5DD5C1BC8619229F /* Pods-easyGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyGo.release.xcconfig"; path = "Target Support Files/Pods-easyGo/Pods-easyGo.release.xcconfig"; sourceTree = "<group>"; };
 		4D65A19126831D9300783BC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D65A19326831F2100783BC5 /* joinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinViewController.swift; sourceTree = "<group>"; };
+		4D65A1E62684B6B700783BC5 /* getData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getData.swift; sourceTree = "<group>"; };
+		4D65A1E92684C80900783BC5 /* listTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = listTableViewCell.swift; path = "/Users/alangprs/Documents/彼得潘班/easyGo/data/listTableViewCell.swift"; sourceTree = "<absolute>"; };
 		4DE4A3D12681B5B60084D587 /* easyGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE4A3D42681B5B60084D587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,9 +75,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4D65A1E82684B6BD00783BC5 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				4D65A1E92684C80900783BC5 /* listTableViewCell.swift */,
+				4D65A1E62684B6B700783BC5 /* getData.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		4DE4A3C82681B5B60084D587 = {
 			isa = PBXGroup;
 			children = (
+				4D65A1E82684B6BD00783BC5 /* data */,
 				4DE4A3ED2681B5E30084D587 /* controller */,
 				4DE4A3D32681B5B60084D587 /* easyGo */,
 				4DE4A3D22681B5B60084D587 /* Products */,
@@ -237,8 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D65A1EA2684C80900783BC5 /* listTableViewCell.swift in Sources */,
 				4DE4A3F12681C83F0084D587 /* orderTableViewController.swift in Sources */,
 				4D65A19426831F2100783BC5 /* joinViewController.swift in Sources */,
+				4D65A1E72684B6B700783BC5 /* getData.swift in Sources */,
 				4DE4A3EC2681B5DF0084D587 /* sinInViewController.swift in Sources */,
 				4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */,
 				4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */,

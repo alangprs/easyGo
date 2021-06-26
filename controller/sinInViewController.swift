@@ -47,7 +47,7 @@ class sinInViewController: UIViewController {
             //登入成功執行
             print("登入成功")
             self.getProvider()
-            self.jumpToListTableView() //跳下一頁
+            self.performSegue(withIdentifier: "show", sender: self) //跳下一頁
         }
     }
     //fb
@@ -89,18 +89,11 @@ class sinInViewController: UIViewController {
                     print("firebase登入成功")
                     //取得使用者資訊
                     self.getProvider()
-                    self.jumpToListTableView()
+                    self.performSegue(withIdentifier: "show", sender: self)
                 }
             }else{
                 print("firebase登入失敗")
             }
-        }
-    }
-    //登入成功 跳到下一頁
-    func jumpToListTableView(){
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "\(listTableViewController.self)"){
-            controller.modalPresentationStyle = .fullScreen
-            present(controller, animated: true, completion: nil)
         }
     }
     
@@ -140,7 +133,6 @@ class sinInViewController: UIViewController {
     @IBAction func sinOut(_ sender: Any) {
         sinOut()
     }
-    
     
     
     /*
