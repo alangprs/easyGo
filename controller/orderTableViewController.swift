@@ -21,8 +21,8 @@ class orderTableViewController: UITableViewController {
     
     @IBOutlet weak var totlePrice: UILabel!//總金額 人數＊價格
     
-    var peopleSanderValue:Int? //存人數
-    var priceSum:Int? //存計算後總金額
+    var peopleSanderValue = 1 //存人數
+    var priceSum = 0 //存計算後總金額
     //讀上一頁來的資料
     let oderData:Records
     
@@ -62,7 +62,7 @@ class orderTableViewController: UITableViewController {
     
     //alert通知
     func confirmAlert(){
-        let controller = UIAlertController(title: "是否送出訂單？", message:"行程名稱:\(oderData.fields.name) \n 人數:\(peopleSanderValue!) \n 行程日期:\(oderData.fields.tirpDate) \n總金額:\(priceSum!)" , preferredStyle: .alert)
+        let controller = UIAlertController(title: "是否送出訂單？", message:"行程名稱:\(oderData.fields.name) \n 人數:\(peopleSanderValue) \n 行程日期:\(oderData.fields.tirpDate) \n總金額:\(priceSum)" , preferredStyle: .alert)
         let yesAction = UIAlertAction(title: "確認", style: .default) { _ in
             print("跳下一頁")
         }
@@ -71,20 +71,22 @@ class orderTableViewController: UITableViewController {
         controller.addAction(noAction)
         present(controller, animated: true, completion: nil)
     }
-    //購買按鈕
-    @IBAction func confirm(_ sender: Any) {
-        confirmAlert()
-    }
     
     //人數選擇
     @IBAction func peopleStepper(_ sender: UIStepper) {
         peopleSanderValue = Int(sender.value)
-        peopleNumber.text = "\(peopleSanderValue!)" //顯示目前選擇人數
-        priceSum = oderData.fields.price * peopleSanderValue! //計算總金額
-        totlePrice.text = "總金額：\(priceSum!)元" //顯示總金額
+        peopleNumber.text = "\(peopleSanderValue)" //顯示目前選擇人數
+        priceSum = oderData.fields.price * peopleSanderValue //計算總金額
+        totlePrice.text = "總金額：\(priceSum)元" //顯示總金額
     }
-    
-    
+
+    //傳資料到info頁面
+    @IBSegueAction func toInfo(_ coder: NSCoder) -> informationTableViewController? {
+        //新增總資料到要傳的自定義info型別裡
+        let toInfoData = InfoData(strokeName: oderData.fields.name, peopleSanderValue: peopleSanderValue, priceSum: priceSum, tirpDate: oderData.fields.tirpDate)
+        return informationTableViewController(coder: coder, infoData: toInfoData)
+    }
+
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

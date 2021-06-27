@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/alangprs/Documents/&#x5f7c;&#x5f97;&#x6f58;&#x73ed;/easyGo/data/listTableViewCell.swift">
+      location = "group:/Users/alangprs/Documents/&#x5f7c;&#x5f97;&#x6f58;&#x73ed;/easyGo/controller/informationTableViewController.swift">
    </FileRef>
    <FileRef
       location = "group:easyGo.xcodeproj">
