@@ -13,7 +13,6 @@ struct UpLoadResponse:Codable {
 }
 struct UpLoadFields:Codable {
     let fields:UpLoadData
-    let id:String
 }
 struct UpLoadData:Codable {
     let name:String
@@ -26,5 +25,6 @@ struct UpLoadData:Codable {
     let numberOfPeople:String
     let Email:String
     let pickUpLocation:String
+    let imageUrl:URL
 
 }

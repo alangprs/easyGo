@@ -12,4 +12,5 @@ struct InfoData {
     var peopleSanderValue:Int //人數
     var priceSum:Int //總金額
     var tirpDate:String //旅遊日期
+    var imageUrl:URL
 }

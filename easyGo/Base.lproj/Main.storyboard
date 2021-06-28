@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbn-V3-wM0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sSd-Pa-nd1">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -586,7 +586,7 @@
             </objects>
             <point key="canvasLocation" x="6703" y="119"/>
         </scene>
-        <!--Oder List Table View Controller-->
+        <!--訂單列表-->
         <scene sceneID="Qy7-Eb-z7r">
             <objects>
                 <tableViewController id="jbn-V3-wM0" customClass="oderListTableViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
@@ -595,68 +595,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oderListTableViewCell" rowHeight="167" id="JXF-LP-HFb" customClass="oderListTableViewCell" customModule="easyGo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="167"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oderListTableViewCell" rowHeight="401" id="JXF-LP-HFb" customClass="oderListTableViewCell" customModule="easyGo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="401"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JXF-LP-HFb" id="bPV-11-CAB">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="167"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="401"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j7r-wH-Sgf">
-                                            <rect key="frame" x="10" y="5" width="273" height="157"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ghY-w6-vOc">
+                                            <rect key="frame" x="20" y="199" width="350" height="192"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行程名稱" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQo-KR-BvG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="36"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂購人名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhE-9R-rda">
-                                                    <rect key="frame" x="0.0" y="56.000000000000007" width="86.666666666666671" height="20.333333333333336"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20.333333333333336" id="zvv-dn-ONg"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="訂購人名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhE-9R-rda">
+                                                    <rect key="frame" x="0.0" y="40.333333333333343" width="86.666666666666671" height="30.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上車地點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYI-UK-TcU">
-                                                    <rect key="frame" x="0.0" y="96.333333333333329" width="69.333333333333329" height="20.333333333333329"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20.333333333333329" id="fFD-Kx-abh"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上車地點" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYI-UK-TcU">
+                                                    <rect key="frame" x="0.0" y="91" width="69.333333333333329" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2X-NI-qdJ">
-                                                    <rect key="frame" x="0.0" y="136.66666666666666" width="34.666666666666664" height="20.333333333333343"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20.333333333333343" id="4LA-cF-S1g"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="131.33333333333331" width="34.666666666666664" height="20.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="總金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAv-Se-Zak">
+                                                    <rect key="frame" x="0.0" y="171.66666666666669" width="52" height="20.333333333333343"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="總金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAv-Se-Zak">
-                                            <rect key="frame" x="308" y="73.333333333333329" width="52" height="20.333333333333329"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="pjU-zF-yty">
+                                            <rect key="frame" x="20" y="11" width="350" height="168"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="168" id="uNA-UI-qkQ"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="j7r-wH-Sgf" secondAttribute="bottom" constant="5" id="JbR-1j-gnj"/>
-                                        <constraint firstItem="j7r-wH-Sgf" firstAttribute="leading" secondItem="bPV-11-CAB" secondAttribute="leading" constant="10" id="K7H-s4-j0h"/>
-                                        <constraint firstItem="WAv-Se-Zak" firstAttribute="leading" secondItem="j7r-wH-Sgf" secondAttribute="trailing" constant="25" id="ZwU-2Y-0gE"/>
-                                        <constraint firstItem="j7r-wH-Sgf" firstAttribute="top" secondItem="bPV-11-CAB" secondAttribute="top" constant="5" id="fLm-Vb-cZa"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="WAv-Se-Zak" secondAttribute="trailing" constant="10" id="hdt-kT-4nH"/>
-                                        <constraint firstItem="WAv-Se-Zak" firstAttribute="centerY" secondItem="j7r-wH-Sgf" secondAttribute="centerY" id="wy5-L6-tBq"/>
+                                        <constraint firstItem="pjU-zF-yty" firstAttribute="top" secondItem="bPV-11-CAB" secondAttribute="topMargin" id="4f7-vI-COz"/>
+                                        <constraint firstAttribute="bottom" secondItem="ghY-w6-vOc" secondAttribute="bottom" constant="10" id="Oxf-59-RgP"/>
+                                        <constraint firstAttribute="trailing" secondItem="ghY-w6-vOc" secondAttribute="trailing" constant="20" id="RWW-D1-HUi"/>
+                                        <constraint firstItem="ghY-w6-vOc" firstAttribute="top" secondItem="pjU-zF-yty" secondAttribute="bottom" constant="20" id="UnE-z8-cg9"/>
+                                        <constraint firstItem="pjU-zF-yty" firstAttribute="leading" secondItem="bPV-11-CAB" secondAttribute="leadingMargin" id="YUR-Vd-h8a"/>
+                                        <constraint firstItem="ghY-w6-vOc" firstAttribute="leading" secondItem="bPV-11-CAB" secondAttribute="leading" constant="20" id="i3v-S1-cTw"/>
+                                        <constraint firstItem="pjU-zF-yty" firstAttribute="trailing" secondItem="bPV-11-CAB" secondAttribute="trailingMargin" id="pQm-A7-OOH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="oderListCellImage" destination="pjU-zF-yty" id="Ktf-1m-0Es"/>
                                     <outletCollection property="oderListCellLabelView" destination="aQo-KR-BvG" collectionClass="NSMutableArray" id="fJw-rl-Oea"/>
                                     <outletCollection property="oderListCellLabelView" destination="PhE-9R-rda" collectionClass="NSMutableArray" id="nE0-J0-1Nu"/>
                                     <outletCollection property="oderListCellLabelView" destination="QYI-UK-TcU" collectionClass="NSMutableArray" id="57G-IH-EII"/>
@@ -670,10 +669,11 @@
                             <outlet property="delegate" destination="jbn-V3-wM0" id="EcX-Fb-Fra"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="訂單列表" id="F44-IL-aPO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGE-ee-zYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7558" y="794"/>
+            <point key="canvasLocation" x="8487.6923076923067" y="784.12322274881512"/>
         </scene>
         <!--Information Table View Controller-->
         <scene sceneID="PUx-Xc-z4G">
@@ -998,8 +998,27 @@
             </objects>
             <point key="canvasLocation" x="4116.9230769230771" y="118.72037914691943"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QVU-48-K20">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sSd-Pa-nd1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iVT-s7-yO7">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jbn-V3-wM0" kind="relationship" relationship="rootViewController" id="wux-oe-Xhu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KyY-u5-reT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7556.9230769230762" y="783.41232227488149"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="image" width="128" height="128"/>
         <image name="雲" width="1449" height="1130"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

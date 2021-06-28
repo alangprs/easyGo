@@ -58,8 +58,6 @@ class oderListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(oderListTableViewCell.self)", for: indexPath) as? oderListTableViewCell else{return UITableViewCell()}
         cell.oderListCellData = oderListData[indexPath.row]
         cell.oderListCellView()
-      
-
         return cell
     }
     

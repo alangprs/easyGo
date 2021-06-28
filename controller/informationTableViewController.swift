@@ -97,7 +97,7 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
     //資料上傳
     func upLoad(){
         // 要上傳的資料
-        let upLoadData = UpLoadResponse(records: [UpLoadFields.init(fields: UpLoadData.init(name: enterInfo[0].text!, price: infoData.priceSum, tirpDate: infoData.tirpDate, phoneNumber: enterInfo[1].text!, strokeName: infoData.strokeName, Birthday: enterInfo[4].text!, IDNumber: enterInfo[2].text!, numberOfPeople: "\(infoData.peopleSanderValue)", Email: enterInfo[3].text!, pickUpLocation: enterInfo[5].text!))])
+        let upLoadData = UpLoadResponse(records: [UpLoadFields.init(fields: UpLoadData.init(name: enterInfo[0].text!, price: infoData.priceSum, tirpDate: infoData.tirpDate, phoneNumber: enterInfo[1].text!, strokeName: infoData.strokeName, Birthday: enterInfo[4].text!, IDNumber: enterInfo[2].text!, numberOfPeople: "\(infoData.peopleSanderValue)", Email: enterInfo[3].text!, pickUpLocation: enterInfo[5].text!, imageUrl: infoData.imageUrl))])
         
         let url = URL(string: "https://api.airtable.com/v0/app1piTZcAMGQEJA4/Table%201")!
         var request = URLRequest(url: url)

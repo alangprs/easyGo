@@ -39,8 +39,10 @@ class orderTableViewController: UITableViewController {
         //顯示照片
         if let url = URL(string: "\(oderData.fields.image)"){
             URLSession.shared.dataTask(with: url) { data, respond, error in
-                DispatchQueue.main.async {
-                    self.orderImage.image = UIImage(data: data!)
+                if let data = data{
+                    DispatchQueue.main.async {
+                        self.orderImage.image = UIImage(data: data)
+                    }
                 }
             }.resume()
         }
@@ -83,7 +85,7 @@ class orderTableViewController: UITableViewController {
     //傳資料到info頁面
     @IBSegueAction func toInfo(_ coder: NSCoder) -> informationTableViewController? {
         //新增總資料到要傳的自定義info型別裡
-        let toInfoData = InfoData(strokeName: oderData.fields.name, peopleSanderValue: peopleSanderValue, priceSum: priceSum, tirpDate: oderData.fields.tirpDate)
+        let toInfoData = InfoData(strokeName: oderData.fields.name, peopleSanderValue: peopleSanderValue, priceSum: priceSum, tirpDate: oderData.fields.tirpDate, imageUrl: oderData.fields.image)
         return informationTableViewController(coder: coder, infoData: toInfoData)
     }
 
