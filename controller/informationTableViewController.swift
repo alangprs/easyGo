@@ -7,7 +7,27 @@
 
 import UIKit
 
-class informationTableViewController: UITableViewController {
+class informationTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    //選單數量
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    //捲動內容的數量
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        pickerViewItem.count
+    }
+    //選擇到選單資料後跑這段
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        enterInfo[5].text = pickerViewItem[row].rawValue
+        enterInfo[5].resignFirstResponder()//收起pickerView
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerViewItem[row].rawValue
+    }
+//    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+//        return 180
+//    }
+    
 
    //上方view顯示資料
     //0 行程名稱 1人數 2日期 3總金額
@@ -16,7 +36,9 @@ class informationTableViewController: UITableViewController {
     //0姓名 1電話 2身分證字號 3email 4出生日期 5上車地點
     @IBOutlet var enterInfo: [UITextField]!
     let datePicker = UIDatePicker() //日期選單
-    
+    let pickerView = UIPickerView() //地點選單
+    //上車地點
+    let pickerViewItem = [Location.新莊棒球場售票口對面,Location.三重爭鮮,Location.蘆洲區公所,Location.永平市場]
     var infoData:InfoData //接odery 資料
     init?(coder:NSCoder,infoData:InfoData) {
         self.infoData = infoData
@@ -51,18 +73,7 @@ class informationTableViewController: UITableViewController {
         enterInfo[4].inputView = datePicker //dateTextfield點下去時跳出datePicker選單
         enterInfo[4].inputAccessoryView = createToolBar() //執行工具
         }
-    //製造容納pickView的toolbar
-    func pickerViewToolbar() -> UIToolbar{
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(pressedPickerView))
-        toolbar.setItems([barButtonItem], animated: true)
-        return toolbar
-    }
-    @objc func pressedPickerView(){
-        let pickerView = UIPickerView()
-        
-    }
+    
     
     //畫面出現時一開始要顯示的內容
     func UpinfoDataView(){
@@ -77,6 +88,10 @@ class informationTableViewController: UITableViewController {
         super.viewDidLoad()
         UpinfoDataView()
         createDatePicker()//執行datePicker
+        //pickerview 相關資料載入
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        enterInfo[5].inputView = pickerView //顯示pickerView
     }
 
     // MARK: - Table view data source
