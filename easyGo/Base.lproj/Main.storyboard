@@ -360,7 +360,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="210" id="8gd-rL-sDg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="210" id="8gd-rL-sDg">
                                         <rect key="frame" x="0.0" y="529" width="390" height="210"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8gd-rL-sDg" id="Cn6-4N-081">
@@ -642,7 +642,7 @@
                         <sections>
                             <tableViewSection id="XUf-oY-aUf">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="enf-b2-Gkf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="110" id="enf-b2-Gkf">
                                         <rect key="frame" x="0.0" y="218" width="390" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="enf-b2-Gkf" id="sDp-W8-l70">
@@ -834,6 +834,33 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110" id="2vs-te-ZqP">
+                                        <rect key="frame" x="0.0" y="878" width="390" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2vs-te-ZqP" id="ekF-I3-amI">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWv-E1-TFv">
+                                                    <rect key="frame" x="70" y="30" width="250" height="50"/>
+                                                    <color key="backgroundColor" red="0.92855814199999998" green="0.64660257409999999" blue="0.33165538550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <state key="normal" title="確認送出">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="sendOut:" destination="DLC-Go-j0x" eventType="touchUpInside" id="yA2-Gz-ytz"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AWv-E1-TFv" firstAttribute="top" secondItem="ekF-I3-amI" secondAttribute="top" constant="30" id="35T-v7-Ax2"/>
+                                                <constraint firstAttribute="trailing" secondItem="AWv-E1-TFv" secondAttribute="trailing" constant="70" id="AeP-Gz-kRj"/>
+                                                <constraint firstItem="AWv-E1-TFv" firstAttribute="leading" secondItem="ekF-I3-amI" secondAttribute="leading" constant="70" id="GWL-DT-JXe"/>
+                                                <constraint firstAttribute="bottom" secondItem="AWv-E1-TFv" secondAttribute="bottom" constant="30" id="r2m-oe-aoH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -844,6 +871,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="5Cd-zh-DP1"/>
                     <connections>
+                        <outlet property="sendOutUI" destination="AWv-E1-TFv" id="Oqe-EU-AVp"/>
                         <outletCollection property="infoTripData" destination="mrA-3P-PPS" collectionClass="NSMutableArray" id="5s1-q1-oUF"/>
                         <outletCollection property="infoTripData" destination="7aQ-5J-wSE" collectionClass="NSMutableArray" id="Snd-Fm-cXy"/>
                         <outletCollection property="infoTripData" destination="YYt-8z-fOD" collectionClass="NSMutableArray" id="Qm0-KO-9b6"/>

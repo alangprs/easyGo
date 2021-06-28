@@ -24,21 +24,20 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerViewItem[row].rawValue
     }
-//    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-//        return 180
-//    }
-    
-
    //上方view顯示資料
     //0 行程名稱 1人數 2日期 3總金額
     @IBOutlet var infoTripData: [UILabel]!
     //使用者輸入的資料textfild
     //0姓名 1電話 2身分證字號 3email 4出生日期 5上車地點
     @IBOutlet var enterInfo: [UITextField]!
+    //送出按鈕 設定相關UI使用
+    @IBOutlet weak var sendOutUI: UIButton!
+    
     let datePicker = UIDatePicker() //日期選單
     let pickerView = UIPickerView() //地點選單
     //上車地點
     let pickerViewItem = [Location.新莊棒球場售票口對面,Location.三重爭鮮,Location.蘆洲區公所,Location.永平市場]
+    
     var infoData:InfoData //接odery 資料
     init?(coder:NSCoder,infoData:InfoData) {
         self.infoData = infoData
@@ -92,7 +91,59 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
         pickerView.delegate = self
         pickerView.dataSource = self
         enterInfo[5].inputView = pickerView //顯示pickerView
+        self.sendOutUI.layer.cornerRadius = 15 //設定送出按鍵圓角
     }
+    
+    //資料上傳
+    func upLoad(){
+        // 要上傳的資料
+        let upLoadData = UpLoadResponse(records: [UpLoadFields.init(fields: UpLoadData.init(name: enterInfo[0].text!, price: infoData.priceSum, tirpDate: infoData.tirpDate, phoneNumber: enterInfo[1].text!, strokeName: infoData.strokeName, Birthday: enterInfo[4].text!, IDNumber: enterInfo[2].text!, numberOfPeople: "\(infoData.peopleSanderValue)", Email: enterInfo[3].text!, pickUpLocation: enterInfo[5].text!))])
+        
+        let url = URL(string: "https://api.airtable.com/v0/app1piTZcAMGQEJA4/Table%201")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer keyyBKvryff4mC1qu", forHTTPHeaderField: "Authorization") //api Key
+        //資料打包成data
+        if let data = try? JSONEncoder().encode(upLoadData){
+            request.httpBody = data
+            URLSession.shared.dataTask(with: request) { data, respond, error in
+                if let data = data{
+                    let content = String(data:data,encoding: .utf8)
+                                        print(content!)
+                                        DispatchQueue.main.async {
+                                            self.tableView.reloadData()
+                                        }
+                }else{
+                    print("上傳資料失敗",error)
+                }
+            }.resume()
+        }
+    }
+    //錯誤通知
+    func textAlert(title:String,message:String){
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "確定", style: .default, handler: nil)
+        controller.addAction(action)
+        present(controller, animated: true, completion: nil)
+    }
+    
+    //送出按鈕
+    @IBAction func sendOut(_ sender: UIButton) {
+        if enterInfo[0].text != "",
+           enterInfo[1].text != "",
+           enterInfo[2].text != "",
+           enterInfo[3].text != "",
+           enterInfo[4].text != "",
+           enterInfo[5].text != ""{
+            upLoad()
+            print("上傳")
+        }else{
+            textAlert(title: "上傳失敗", message: "請確認資料是否輸入完畢")
+            print("失敗")
+        }
+    }
+    
 
     // MARK: - Table view data source
 
