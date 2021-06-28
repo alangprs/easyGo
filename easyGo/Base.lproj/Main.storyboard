@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RCD-bf-6Yx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbn-V3-wM0">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -585,6 +585,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tH-Yh-k7X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6703" y="119"/>
+        </scene>
+        <!--Oder List Table View Controller-->
+        <scene sceneID="Qy7-Eb-z7r">
+            <objects>
+                <tableViewController id="jbn-V3-wM0" customClass="oderListTableViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2LG-MY-JZa">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oderListTableViewCell" rowHeight="167" id="JXF-LP-HFb" customClass="oderListTableViewCell" customModule="easyGo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="167"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JXF-LP-HFb" id="bPV-11-CAB">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j7r-wH-Sgf">
+                                            <rect key="frame" x="10" y="5" width="273" height="157"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行程名稱" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQo-KR-BvG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂購人名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhE-9R-rda">
+                                                    <rect key="frame" x="0.0" y="56.000000000000007" width="86.666666666666671" height="20.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.333333333333336" id="zvv-dn-ONg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上車地點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYI-UK-TcU">
+                                                    <rect key="frame" x="0.0" y="96.333333333333329" width="69.333333333333329" height="20.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.333333333333329" id="fFD-Kx-abh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人數" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2X-NI-qdJ">
+                                                    <rect key="frame" x="0.0" y="136.66666666666666" width="34.666666666666664" height="20.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.333333333333343" id="4LA-cF-S1g"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="總金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAv-Se-Zak">
+                                            <rect key="frame" x="308" y="73.333333333333329" width="52" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="j7r-wH-Sgf" secondAttribute="bottom" constant="5" id="JbR-1j-gnj"/>
+                                        <constraint firstItem="j7r-wH-Sgf" firstAttribute="leading" secondItem="bPV-11-CAB" secondAttribute="leading" constant="10" id="K7H-s4-j0h"/>
+                                        <constraint firstItem="WAv-Se-Zak" firstAttribute="leading" secondItem="j7r-wH-Sgf" secondAttribute="trailing" constant="25" id="ZwU-2Y-0gE"/>
+                                        <constraint firstItem="j7r-wH-Sgf" firstAttribute="top" secondItem="bPV-11-CAB" secondAttribute="top" constant="5" id="fLm-Vb-cZa"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="WAv-Se-Zak" secondAttribute="trailing" constant="10" id="hdt-kT-4nH"/>
+                                        <constraint firstItem="WAv-Se-Zak" firstAttribute="centerY" secondItem="j7r-wH-Sgf" secondAttribute="centerY" id="wy5-L6-tBq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outletCollection property="oderListCellLabelView" destination="aQo-KR-BvG" collectionClass="NSMutableArray" id="fJw-rl-Oea"/>
+                                    <outletCollection property="oderListCellLabelView" destination="PhE-9R-rda" collectionClass="NSMutableArray" id="nE0-J0-1Nu"/>
+                                    <outletCollection property="oderListCellLabelView" destination="QYI-UK-TcU" collectionClass="NSMutableArray" id="57G-IH-EII"/>
+                                    <outletCollection property="oderListCellLabelView" destination="L2X-NI-qdJ" collectionClass="NSMutableArray" id="BRJ-9M-xT8"/>
+                                    <outletCollection property="oderListCellLabelView" destination="WAv-Se-Zak" collectionClass="NSMutableArray" id="FEz-Ah-71m"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jbn-V3-wM0" id="JA4-TA-jHk"/>
+                            <outlet property="delegate" destination="jbn-V3-wM0" id="EcX-Fb-Fra"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGE-ee-zYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7558" y="794"/>
         </scene>
         <!--Information Table View Controller-->
         <scene sceneID="PUx-Xc-z4G">

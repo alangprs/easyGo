@@ -13,6 +13,7 @@ struct UpLoadResponse:Codable {
 }
 struct UpLoadFields:Codable {
     let fields:UpLoadData
+    let id:String
 }
 struct UpLoadData:Codable {
     let name:String

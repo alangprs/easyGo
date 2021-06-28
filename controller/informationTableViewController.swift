@@ -142,6 +142,7 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
             textAlert(title: "上傳失敗", message: "請確認資料是否輸入完畢")
             print("失敗")
         }
+     
     }
     
 

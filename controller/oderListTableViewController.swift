@@ -1,54 +1,45 @@
 //
-//  listTableViewController.swift
+//  oderListTableViewController.swift
 //  easyGo
 //
-//  Created by 翁燮羽 on 2021/6/22.
-//
+//  Created by 翁燮羽 on 2021/6/28.
+// 訂購清單
 
 import UIKit
 
-class listTableViewController: UITableViewController {
-
-    var getData = [Records]()
+class oderListTableViewController: UITableViewController {
+    var oderListData = [UpLoadFields]() //存下載的資料
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.setHidesBackButton(true, animated: false) //隱藏Navigation Bar item
-        downloadData()
-    }
-    
-    //資料下載
-    func downloadData(){
-        let url = URL(string: "https://api.airtable.com/v0/appE2Je8GWZrBuVzA/Table%201")!
-        var request = URLRequest(url:url)
+    //下載選購清單資料
+    func downloadOderListData(){
+        let url = URL(string: "https://api.airtable.com/v0/app1piTZcAMGQEJA4/Table%201")!
+        var request = URLRequest(url: url)
         request.setValue("Bearer keyyBKvryff4mC1qu", forHTTPHeaderField: "Authorization")
-        URLSession.shared.dataTask(with: request) { data, responds, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data{
                 do {
-                    let recordsResponse = try JSONDecoder().decode(GETResponse.self, from: data)
+                    let recordsResponse = try JSONDecoder().decode(UpLoadResponse.self, from: data)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
-                    self.getData = recordsResponse.records
-                    print(recordsResponse.records)
+                    self.oderListData = recordsResponse.records
+                    print("下載資料",recordsResponse)
                 } catch {
-                    print("解析失敗",error)
+                    print("oderList資料下載失敗",error)
                 }
             }
         }.resume()
-        
-    }
-    //要傳的資料
-    @IBSegueAction func passToOderTableView(_ coder: NSCoder) -> orderTableViewController? {
-        if let item = tableView.indexPathForSelectedRow?.row{
-            return orderTableViewController(coder: coder, oderData: getData[item])
-            
-        }else{
-            return nil
-        }
-        
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        downloadOderListData()
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
 
     // MARK: - Table view data source
 
@@ -59,14 +50,15 @@ class listTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return getData.count
+        return oderListData.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(listTableViewCell.self)", for: indexPath) as? listTableViewCell else{return UITableViewCell()}
-        cell.cellData = getData[indexPath.row]
-        cell.cellView()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(oderListTableViewCell.self)", for: indexPath) as? oderListTableViewCell else{return UITableViewCell()}
+        cell.oderListCellData = oderListData[indexPath.row]
+        cell.oderListCellView()
+      
 
         return cell
     }
