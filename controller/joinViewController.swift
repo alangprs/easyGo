@@ -41,7 +41,12 @@ class joinViewController: UIViewController {
                 return
             }
             //註冊成功執行
-            self.dismiss(animated: true, completion: nil)
+//            self.dismiss(animated: true, completion: nil)
+            //跳轉到list頁面
+            if let coneroller = self.storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
+                coneroller.modalPresentationStyle = .fullScreen
+                self.present(coneroller, animated: true, completion: nil)
+            }
             print("註冊成功")
         }
     }

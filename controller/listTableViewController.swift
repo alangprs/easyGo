@@ -17,7 +17,21 @@ class listTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false) //隱藏Navigation Bar item
         downloadData()
+        
     }
+    
+//    //下拉更新
+//    func useUpdata(){
+//        let refreshControl = UIRefreshControl()
+//        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.yellow]
+//        //顯示文字內容
+//        refreshControl.attributedTitle = NSAttributedString(string: "正在更新中", attributes: attributes)
+////        refreshControl.tintColor = UIColor.black
+////        refreshControl.backgroundColor = UIColor.white
+//        tableView.refreshControl = refreshControl
+//        refreshControl.addTarget(self, action: #selector(downloadData), for: UIControl.Event.valueChanged)
+//
+//    }
     
     //資料下載
     func downloadData(){
@@ -31,9 +45,10 @@ class listTableViewController: UITableViewController {
                     let recordsResponse = try JSONDecoder().decode(GETResponse.self, from: data)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        self.ActivityIndicator.isHidden = true
                     }
                     self.getData = recordsResponse.records
-                    self.ActivityIndicator.isHidden = true
+                    
                 } catch {
                     print("解析失敗",error)
                 }

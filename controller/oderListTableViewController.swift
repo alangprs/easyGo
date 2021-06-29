@@ -23,9 +23,10 @@ class oderListTableViewController: UITableViewController {
                     let recordsResponse = try JSONDecoder().decode(UpLoadResponse.self, from: data)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        self.ActivityIndicator.isHidden = true
                     }
                     self.oderListData = recordsResponse.records
-                    self.ActivityIndicator.isHidden = true
+                    
                 } catch {
                     print("oderList資料下載失敗",error)
                 }

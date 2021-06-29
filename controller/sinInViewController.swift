@@ -10,11 +10,6 @@ import UIKit
 import Firebase
 import FacebookLogin
 
-//全域變數 存使用者名稱、mail
-var userNames = String()
-var userEmails = String()
-
-
 class sinInViewController: UIViewController {
     //帳號輸入
     @IBOutlet weak var sinInEmailTextField: UITextField!
@@ -47,7 +42,11 @@ class sinInViewController: UIViewController {
             //登入成功執行
             print("登入成功")
             self.getProvider()
-            self.performSegue(withIdentifier: "show", sender: self) //跳下一頁
+            //跳下一頁
+            if let coneroller = self.storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
+                coneroller.modalPresentationStyle = .fullScreen
+                self.present(coneroller, animated: true, completion: nil)
+            }
             //清空帳號密碼
             self.sinInEmailTextField.text = ""
             self.sinInPassWordTextField.text = ""
@@ -64,12 +63,6 @@ class sinInViewController: UIViewController {
             print("\(user.providerID)登入")
             if user.providerID.count > 0{
                 let userInfo = user.providerData[0]
-                //如果有取得使用者資料，存到全域變數裡
-                if let userName = userInfo.displayName,
-                   let userEmail = userInfo.email{
-                    userNames = userName
-                    userEmails = userEmail
-                }
                 print("使用者名稱",userInfo.displayName,userInfo.email)
             }else{
                 print("取得使用者資訊失敗")
