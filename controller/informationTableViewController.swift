@@ -138,6 +138,11 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
            enterInfo[5].text != ""{
             upLoad()
             print("上傳")
+            //跳到訂單頁面
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "\(oderListTableViewController.self)"){
+                controller.modalPresentationStyle = .fullScreen //全螢幕
+                present(controller, animated: true, completion: nil)
+            }
         }else{
             textAlert(title: "上傳失敗", message: "請確認資料是否輸入完畢")
             print("失敗")

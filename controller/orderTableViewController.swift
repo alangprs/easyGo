@@ -60,6 +60,8 @@ class orderTableViewController: UITableViewController {
         showOderDataView()
         personPrice.text = "每人\(oderData.fields.price)元" //顯示讀到的單人金額
         totlePrice.text = "總金額：\(oderData.fields.price)元" //顯示總金額
+        //讓總金額一開始就維持最低1人的金額
+        priceSum = oderData.fields.price
     }
     
     //alert通知

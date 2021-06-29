@@ -101,20 +101,20 @@ class sinInViewController: UIViewController {
     @IBAction func fbSinIn(_ sender: UIButton) {
         fbLogIn()
     }
-    //登出
-    func sinOut(){
-        if let _ = Auth.auth().currentUser{
-            do {
-                try Auth.auth().signOut()
-                texAlert(title: "已登出", message: "等你回來")
-                print("已登出")
-            } catch {
-                texAlert(title: "登出失敗", message: "\(error.localizedDescription)")
-                print("登出失敗",error.localizedDescription)
-            }
-        }
-        
-    }
+//    //登出
+//    func sinOut(){
+//        if let _ = Auth.auth().currentUser{
+//            do {
+//                try Auth.auth().signOut()
+//                texAlert(title: "已登出", message: "等你回來")
+//                print("已登出")
+//            } catch {
+//                texAlert(title: "登出失敗", message: "\(error.localizedDescription)")
+//                print("登出失敗",error.localizedDescription)
+//            }
+//        }
+//
+//    }
     
     
     //開始按鈕
@@ -129,11 +129,18 @@ class sinInViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
-    //登出
-    @IBAction func sinOut(_ sender: Any) {
-        sinOut()
+    //跳到訂單清單
+    @IBAction func toOderListTabelView(_ sender: Any) {
+        if let controller = storyboard?.instantiateViewController(withIdentifier: "\(oderListTableViewController.self)"){
+            controller.modalPresentationStyle = .fullScreen
+            present(controller, animated: true, completion: nil)
+        }
     }
     
+    //讓訂單頁面回來
+    @IBAction func unwindToSinInView(_ unwindSegue: UIStoryboardSegue) {
+        
+    }
     
     /*
     // MARK: - Navigation
