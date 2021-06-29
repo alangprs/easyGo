@@ -11,6 +11,8 @@ class listTableViewController: UITableViewController {
 
     var getData = [Records]()
     
+    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false) //隱藏Navigation Bar item
@@ -19,6 +21,7 @@ class listTableViewController: UITableViewController {
     
     //資料下載
     func downloadData(){
+        ActivityIndicator.isHidden = false
         let url = URL(string: "https://api.airtable.com/v0/appE2Je8GWZrBuVzA/Table%201")!
         var request = URLRequest(url:url)
         request.setValue("Bearer keyyBKvryff4mC1qu", forHTTPHeaderField: "Authorization")
@@ -30,7 +33,7 @@ class listTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     }
                     self.getData = recordsResponse.records
-                    print(recordsResponse.records)
+                    self.ActivityIndicator.isHidden = true
                 } catch {
                     print("解析失敗",error)
                 }

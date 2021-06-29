@@ -48,6 +48,9 @@ class sinInViewController: UIViewController {
             print("登入成功")
             self.getProvider()
             self.performSegue(withIdentifier: "show", sender: self) //跳下一頁
+            //清空帳號密碼
+            self.sinInEmailTextField.text = ""
+            self.sinInPassWordTextField.text = ""
         }
     }
     //fb

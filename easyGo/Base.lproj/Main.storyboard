@@ -233,6 +233,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="9vk-j0-plc">
+                            <rect key="frame" x="0.0" y="159.00000416148794" width="390" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listTableViewCell" id="luc-Wc-d9t" customClass="listTableViewCell" customModule="easyGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="110.33333587646484"/>
@@ -280,6 +284,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8OI-KL-rV5"/>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="9vk-j0-plc" id="X40-NZ-d5K"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psk-ua-ZIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -614,6 +621,10 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="bLY-7c-DWv">
+                            <rect key="frame" x="0.0" y="489.66666828502309" width="390" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oderListTableViewCell" rowHeight="401" id="JXF-LP-HFb" customClass="oderListTableViewCell" customModule="easyGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64.333333969116211" width="390" height="401"/>
@@ -696,6 +707,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="bLY-7c-DWv" id="uAP-8h-Xf8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGE-ee-zYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="UeV-gf-Qrz" userLabel="Exit" sceneMemberID="exit"/>

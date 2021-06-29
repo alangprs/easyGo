@@ -10,8 +10,10 @@ import UIKit
 class oderListTableViewController: UITableViewController {
     var oderListData = [UpLoadFields]() //存下載的資料
     
+    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
     //下載選購清單資料
     func downloadOderListData(){
+        ActivityIndicator.isHidden = false
         let url = URL(string: "https://api.airtable.com/v0/app1piTZcAMGQEJA4/Table%201")!
         var request = URLRequest(url: url)
         request.setValue("Bearer keyyBKvryff4mC1qu", forHTTPHeaderField: "Authorization")
@@ -23,7 +25,7 @@ class oderListTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     }
                     self.oderListData = recordsResponse.records
-                    print("下載資料",recordsResponse)
+                    self.ActivityIndicator.isHidden = true
                 } catch {
                     print("oderList資料下載失敗",error)
                 }
