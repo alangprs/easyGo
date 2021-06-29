@@ -18,9 +18,20 @@ class sinInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        fixSinIn()
     }
+    //判斷目前是否有登入，如果有登入跳轉至list頁面
+    func fixSinIn(){
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil{
+                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
+                    controller.modalPresentationStyle = .fullScreen //跳轉到list頁面時為滿版
+                    self.present(controller, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
     //彈跳出通知
     func texAlert(title:String,message:String){
         let conertller = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -63,7 +74,11 @@ class sinInViewController: UIViewController {
             print("\(user.providerID)登入")
             if user.providerID.count > 0{
                 let userInfo = user.providerData[0]
-                print("使用者名稱",userInfo.displayName,userInfo.email)
+                print("使用者名稱",userInfo.email,"目前是登入狀態喔")
+                //判斷如果已經登入，直接跳到list頁面
+                    if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
+                        present(controller, animated: true, completion: nil)
+                }
             }else{
                 print("取得使用者資訊失敗")
             }
