@@ -18,19 +18,8 @@ class sinInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fixSinIn()
     }
-    //判斷目前是否有登入，如果有登入跳轉至list頁面
-    func fixSinIn(){
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if user != nil{
-                if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
-                    controller.modalPresentationStyle = .fullScreen //跳轉到list頁面時為滿版
-                    self.present(controller, animated: true, completion: nil)
-                }
-            }
-        }
-    }
+    
     
     //彈跳出通知
     func texAlert(title:String,message:String){
@@ -126,8 +115,6 @@ class sinInViewController: UIViewController {
 //        }
 //
 //    }
-    
-    
     //開始按鈕
     @IBAction func sinIn(_ sender: UIButton) {
         emailSinIn()
@@ -140,19 +127,6 @@ class sinInViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
-    //跳到訂單清單
-    @IBAction func toOderListTabelView(_ sender: Any) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "\(oderListTableViewController.self)"){
-            controller.modalPresentationStyle = .fullScreen
-            present(controller, animated: true, completion: nil)
-        }
-    }
-    
-    //讓訂單頁面回來
-    @IBAction func unwindToSinInView(_ unwindSegue: UIStoryboardSegue) {
-        
-    }
-    
     /*
     // MARK: - Navigation
 
