@@ -1,64 +1,35 @@
 //
-//  personalDataTableViewController.swift
+//  editPersonalTableViewController.swift
 //  easyGo
 //
 //  Created by 翁燮羽 on 2021/6/30.
-//基本資料修改
+//修改基本資料頁面
 
 import UIKit
-import Firebase
 
-class personalDataTableViewController: UITableViewController {
+class editPersonalTableViewController: UITableViewController {
 
-    //0 姓名 1手機 2信箱
-    @IBOutlet var personalDataLabelView: [UILabel]!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-//    //彈跳通知
-    func textAlert(title:String,message:String){
-        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "確定", style: .default) { action in
-            //跳回登入畫面
-            if let goController = self.storyboard?.instantiateViewController(withIdentifier: "\(sinInViewController.self)"){
-                goController.modalPresentationStyle = .fullScreen
-                self.present(goController, animated: true, completion: nil)
-            }
 
-
-        }
-        controller.addAction(action)
-        present(controller, animated: true, completion: nil)
-        }
-    //登出
-    @IBAction func longUut(_ sender: UIButton) {
-        if let _ = Auth.auth().currentUser{
-            do {
-                try Auth.auth().signOut()
-                textAlert(title: "已登出", message: "等你回來")
-                print("已登出")
-            } catch {
-                textAlert(title: "登出失敗", message: "\(error.localizedDescription)")
-                print("登出失敗",error.localizedDescription)
-            }
-        }
-
-    }
-    
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

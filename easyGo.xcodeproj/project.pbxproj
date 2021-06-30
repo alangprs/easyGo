@@ -20,6 +20,7 @@
 		4DA88AD7268A279D0006E411 /* oderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */; };
 		4DA88AD9268BBB420006E411 /* personalDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88AD8268BBB420006E411 /* personalDataTableViewController.swift */; };
 		4DA88ADB268C668C0006E411 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88ADA268C668C0006E411 /* mainViewController.swift */; };
+		4DA88ADD268C75670006E411 /* editPersonalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88ADC268C75670006E411 /* editPersonalTableViewController.swift */; };
 		4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D42681B5B60084D587 /* AppDelegate.swift */; };
 		4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */; };
 		4DE4A3DC2681B5B60084D587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE4A3DA2681B5B60084D587 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oderListTableViewCell.swift; sourceTree = "<group>"; };
 		4DA88AD8268BBB420006E411 /* personalDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalDataTableViewController.swift; sourceTree = "<group>"; };
 		4DA88ADA268C668C0006E411 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		4DA88ADC268C75670006E411 /* editPersonalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editPersonalTableViewController.swift; sourceTree = "<group>"; };
 		4DE4A3D12681B5B60084D587 /* easyGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE4A3D42681B5B60084D587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA88ADA268C668C0006E411 /* mainViewController.swift */,
+				4DA88ADC268C75670006E411 /* editPersonalTableViewController.swift */,
 				4DA88AD8268BBB420006E411 /* personalDataTableViewController.swift */,
 				4D65B09026873363008CB97B /* informationTableViewController.swift */,
 				4DE4A3EB2681B5DF0084D587 /* sinInViewController.swift */,
@@ -284,6 +287,7 @@
 				4DA88AD9268BBB420006E411 /* personalDataTableViewController.swift in Sources */,
 				4D65A1E72684B6B700783BC5 /* getData.swift in Sources */,
 				4DE4A3EC2681B5DF0084D587 /* sinInViewController.swift in Sources */,
+				4DA88ADD268C75670006E411 /* editPersonalTableViewController.swift in Sources */,
 				4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */,
 				4DA88AD1268990210006E411 /* location.swift in Sources */,
 				4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */,

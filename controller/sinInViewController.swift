@@ -66,6 +66,7 @@ class sinInViewController: UIViewController {
                 print("使用者名稱",userInfo.email,"目前是登入狀態喔")
                 //判斷如果已經登入，直接跳到list頁面
                     if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
+                        controller.modalPresentationStyle = .fullScreen
                         present(controller, animated: true, completion: nil)
                 }
             }else{
@@ -89,7 +90,12 @@ class sinInViewController: UIViewController {
                     print("firebase登入成功")
                     //取得使用者資訊
                     self.getProvider()
-                    self.performSegue(withIdentifier: "show", sender: self)
+                    //判斷如果已經登入，直接跳到list頁面
+                    if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
+                            controller.modalPresentationStyle = .fullScreen
+                        self.present(controller, animated: true, completion: nil)
+                    }
+                    
                 }
             }else{
                 print("firebase登入失敗")
@@ -101,20 +107,7 @@ class sinInViewController: UIViewController {
     @IBAction func fbSinIn(_ sender: UIButton) {
         fbLogIn()
     }
-//    //登出
-//    func sinOut(){
-//        if let _ = Auth.auth().currentUser{
-//            do {
-//                try Auth.auth().signOut()
-//                texAlert(title: "已登出", message: "等你回來")
-//                print("已登出")
-//            } catch {
-//                texAlert(title: "登出失敗", message: "\(error.localizedDescription)")
-//                print("登出失敗",error.localizedDescription)
-//            }
-//        }
-//
-//    }
+//    
     //開始按鈕
     @IBAction func sinIn(_ sender: UIButton) {
         emailSinIn()
@@ -127,6 +120,8 @@ class sinInViewController: UIViewController {
             present(controller, animated: true, completion: nil)
         }
     }
+    
+
     /*
     // MARK: - Navigation
 
