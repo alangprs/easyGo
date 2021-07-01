@@ -631,11 +631,6 @@
                                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xwx-cC-Sck">
                                     <rect key="frame" x="0.0" y="8" width="390" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <items>
-                                        <navigationItem title="訂購清單" id="5kb-SZ-Dpj">
-                                            <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="PVj-aZ-ZiI"/>
-                                        </navigationItem>
-                                    </items>
                                 </navigationBar>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
