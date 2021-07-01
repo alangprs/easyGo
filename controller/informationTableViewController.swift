@@ -137,9 +137,8 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
            enterInfo[4].text != "",
            enterInfo[5].text != ""{
             upLoad()
-            print("上傳")
             //跳到訂單頁面
-            if let controller = storyboard?.instantiateViewController(withIdentifier: "\(oderListTableViewController.self)"){
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
                 controller.modalPresentationStyle = .fullScreen //全螢幕
                 present(controller, animated: true, completion: nil)
             }
