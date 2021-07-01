@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class listTableViewController: UITableViewController {
 
@@ -65,6 +66,32 @@ class listTableViewController: UITableViewController {
             return nil
         }
         
+    }
+    //彈跳通知
+    func textAlert(title:String,message:String){
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "確定", style: .default) { action in
+            //跳回登入畫面
+            if let goController = self.storyboard?.instantiateViewController(withIdentifier: "\(sinInViewController.self)"){
+                goController.modalPresentationStyle = .fullScreen
+                self.present(goController, animated: true, completion: nil)
+            }
+        }
+        controller.addAction(action)
+        present(controller, animated: true, completion: nil)
+        }
+    //登出
+    @IBAction func sinInOut(_ sender: Any) {
+        if let _ = Auth.auth().currentUser{
+            do {
+                try Auth.auth().signOut()
+                textAlert(title: "已登出", message: "等你回來")
+                print("已登出")
+            } catch {
+                textAlert(title: "登出失敗", message: "\(error.localizedDescription)")
+                print("登出失敗",error.localizedDescription)
+            }
+        }
     }
     
 

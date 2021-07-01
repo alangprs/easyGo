@@ -10,15 +10,22 @@ import Firebase
 
 class personalDataTableViewController: UITableViewController {
 
-    //0 姓名 1手機 2信箱
-    @IBOutlet var personalDataLabelView: [UILabel]!
-    
+    //0 姓名 1信箱
+    @IBOutlet var editPersonal: [UITextField]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        upDataUI()
+    }
+    //取得使用者資訊
+    func upDataUI(){
+        if let user = Auth.auth().currentUser{
+            editPersonal[0].text = user.displayName ?? ""
+            
+        }
     }
     
-//    //彈跳通知
+    //彈跳通知
     func textAlert(title:String,message:String){
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "確定", style: .default) { action in
@@ -27,8 +34,6 @@ class personalDataTableViewController: UITableViewController {
                 goController.modalPresentationStyle = .fullScreen
                 self.present(goController, animated: true, completion: nil)
             }
-
-
         }
         controller.addAction(action)
         present(controller, animated: true, completion: nil)
@@ -45,8 +50,21 @@ class personalDataTableViewController: UITableViewController {
                 print("登出失敗",error.localizedDescription)
             }
         }
-
     }
+    
+    //修改使用者資料
+    @IBAction func edit(_ sender: Any) {
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = editPersonal[0].text
+        //commitChanges 請求修改
+                       changeRequest?.commitChanges(completion: { error in
+                           guard error == nil else{
+                               print(error?.localizedDescription)
+                               return
+                           }
+                       })
+    }
+    
     
     // MARK: - Table view data source
 
