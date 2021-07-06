@@ -7,6 +7,7 @@
 
 import UIKit
 import FacebookCore
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -34,8 +35,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        fixSinIn()
+        
     }
-
+    //設定如果已經有登入資料，直接跳到選購畫面
+    func fixSinIn(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil{
+                self.window?.rootViewController = storyboard.instantiateViewController(identifier: "ListNavigation")
+            }else{ //如果沒登入 跳到登入畫面
+                self.window?.rootViewController = storyboard.instantiateViewController(identifier: "sinInViewController")
+            }
+        }
+    }
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

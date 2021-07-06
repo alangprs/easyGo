@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GAD-4v-OK6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WON-qf-DJF">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,32 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
-        <scene sceneID="zmG-oO-2Ty">
-            <objects>
-                <viewController storyboardIdentifier="mainViewController" id="GAD-4v-OK6" customClass="mainViewController" customModule="easyGo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SGX-ik-92L">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trip" translatesAutoresizingMaskIntoConstraints="NO" id="eoM-SH-1RZ">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="To6-UJ-USp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="eoM-SH-1RZ" secondAttribute="bottom" id="MB9-h4-pYk"/>
-                            <constraint firstItem="eoM-SH-1RZ" firstAttribute="top" secondItem="SGX-ik-92L" secondAttribute="top" id="Sck-PO-EIv"/>
-                            <constraint firstItem="eoM-SH-1RZ" firstAttribute="leading" secondItem="SGX-ik-92L" secondAttribute="leading" id="Wnc-mP-zhb"/>
-                            <constraint firstAttribute="trailing" secondItem="eoM-SH-1RZ" secondAttribute="trailing" id="f6A-pU-1ZX"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KsH-KC-Hry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4180" y="119"/>
-        </scene>
         <!--Sin In View Controller-->
         <scene sceneID="BaJ-8Y-M1H">
             <objects>
@@ -1078,7 +1052,6 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="image" width="128" height="128"/>
-        <image name="trip" width="564" height="846"/>
         <image name="雲" width="1449" height="1130"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -21,19 +21,6 @@ class listTableViewController: UITableViewController {
         
     }
     
-//    //下拉更新
-//    func useUpdata(){
-//        let refreshControl = UIRefreshControl()
-//        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.yellow]
-//        //顯示文字內容
-//        refreshControl.attributedTitle = NSAttributedString(string: "正在更新中", attributes: attributes)
-////        refreshControl.tintColor = UIColor.black
-////        refreshControl.backgroundColor = UIColor.white
-//        tableView.refreshControl = refreshControl
-//        refreshControl.addTarget(self, action: #selector(downloadData), for: UIControl.Event.valueChanged)
-//
-//    }
-    
     //資料下載
     func downloadData(){
         ActivityIndicator.isHidden = false
@@ -85,7 +72,6 @@ class listTableViewController: UITableViewController {
         if let _ = Auth.auth().currentUser{
             do {
                 try Auth.auth().signOut()
-                textAlert(title: "已登出", message: "等你回來")
                 print("已登出")
             } catch {
                 textAlert(title: "登出失敗", message: "\(error.localizedDescription)")

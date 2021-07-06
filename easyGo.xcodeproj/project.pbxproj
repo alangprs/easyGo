@@ -18,7 +18,6 @@
 		4DA88AD1268990210006E411 /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88AD0268990210006E411 /* location.swift */; };
 		4DA88AD32689E42C0006E411 /* oderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88AD22689E42C0006E411 /* oderListTableViewController.swift */; };
 		4DA88AD7268A279D0006E411 /* oderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */; };
-		4DA88ADB268C668C0006E411 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88ADA268C668C0006E411 /* mainViewController.swift */; };
 		4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D42681B5B60084D587 /* AppDelegate.swift */; };
 		4DE4A3D72681B5B60084D587 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */; };
 		4DE4A3DC2681B5B60084D587 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE4A3DA2681B5B60084D587 /* Main.storyboard */; };
@@ -43,7 +42,6 @@
 		4DA88AD0268990210006E411 /* location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = location.swift; path = "/Users/alangprs/Documents/彼得潘班/easyGo/data/location.swift"; sourceTree = "<absolute>"; };
 		4DA88AD22689E42C0006E411 /* oderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oderListTableViewController.swift; sourceTree = "<group>"; };
 		4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oderListTableViewCell.swift; sourceTree = "<group>"; };
-		4DA88ADA268C668C0006E411 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		4DE4A3D12681B5B60084D587 /* easyGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE4A3D42681B5B60084D587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE4A3D62681B5B60084D587 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 		4DE4A3ED2681B5E30084D587 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				4DA88ADA268C668C0006E411 /* mainViewController.swift */,
 				4D65B09026873363008CB97B /* informationTableViewController.swift */,
 				4DE4A3EB2681B5DF0084D587 /* sinInViewController.swift */,
 				4DE4A3EE2681C2770084D587 /* listTableViewController.swift */,
@@ -274,7 +271,6 @@
 			files = (
 				4D65A1EA2684C80900783BC5 /* listTableViewCell.swift in Sources */,
 				4DE4A3F12681C83F0084D587 /* orderTableViewController.swift in Sources */,
-				4DA88ADB268C668C0006E411 /* mainViewController.swift in Sources */,
 				4D65B09126873363008CB97B /* informationTableViewController.swift in Sources */,
 				4D65A19426831F2100783BC5 /* joinViewController.swift in Sources */,
 				4DA88AD7268A279D0006E411 /* oderListTableViewCell.swift in Sources */,
