@@ -38,7 +38,7 @@
 		4D65A1E92684C80900783BC5 /* listTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = listTableViewCell.swift; path = "/Users/alangprs/Documents/彼得潘班/easyGo/data/listTableViewCell.swift"; sourceTree = "<absolute>"; };
 		4D65B09026873363008CB97B /* informationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = informationTableViewController.swift; path = "/Users/alangprs/Documents/彼得潘班/easyGo/controller/informationTableViewController.swift"; sourceTree = "<absolute>"; };
 		4D66FA7C268823C1001BFD65 /* uploadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadData.swift; sourceTree = "<group>"; };
-		4D66FA8026882438001BFD65 /* infoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = infoData.swift; path = data/infoData.swift; sourceTree = SOURCE_ROOT; };
+		4D66FA8026882438001BFD65 /* infoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = infoData.swift; path = model/infoData.swift; sourceTree = SOURCE_ROOT; };
 		4DA88AD0268990210006E411 /* location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = location.swift; path = "/Users/alangprs/Documents/彼得潘班/easyGo/data/location.swift"; sourceTree = "<absolute>"; };
 		4DA88AD22689E42C0006E411 /* oderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oderListTableViewController.swift; sourceTree = "<group>"; };
 		4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oderListTableViewCell.swift; sourceTree = "<group>"; };
@@ -87,23 +87,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4D65A1E82684B6BD00783BC5 /* data */ = {
+		4DC74755269EED9D00A9FC74 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				4DA88AD0268990210006E411 /* location.swift */,
-				4D65A1E92684C80900783BC5 /* listTableViewCell.swift */,
 				4D65A1E62684B6B700783BC5 /* getData.swift */,
-				4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */,
 				4D66FA7C268823C1001BFD65 /* uploadData.swift */,
 				4D66FA8026882438001BFD65 /* infoData.swift */,
+				4DA88AD0268990210006E411 /* location.swift */,
 			);
-			path = data;
+			path = model;
+			sourceTree = "<group>";
+		};
+		4DC74756269EEDC200A9FC74 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4D65A1E92684C80900783BC5 /* listTableViewCell.swift */,
+				4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		4DE4A3C82681B5B60084D587 = {
 			isa = PBXGroup;
 			children = (
-				4D65A1E82684B6BD00783BC5 /* data */,
+				4DC74756269EEDC200A9FC74 /* view */,
+				4DC74755269EED9D00A9FC74 /* model */,
 				4DE4A3ED2681B5E30084D587 /* controller */,
 				4DE4A3D32681B5B60084D587 /* easyGo */,
 				4DE4A3D22681B5B60084D587 /* Products */,
