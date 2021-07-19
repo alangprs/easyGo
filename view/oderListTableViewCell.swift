@@ -8,20 +8,27 @@
 import UIKit
 
 class oderListTableViewCell: UITableViewCell {
-
-    //0行程名稱 1訂購人名稱 2上車地點 3人數 4價格
-    @IBOutlet var oderListCellLabelView: [UILabel]!
-    @IBOutlet weak var oderListCellImage: UIImageView!
     
+    //行程名稱
+    @IBOutlet weak var travelNameLable: UILabel!
+    //訂購人名稱
+    @IBOutlet weak var subscriberName: UILabel!
+    //上車地點
+    @IBOutlet weak var pickUpLocation: UILabel!
+    //人數
+    @IBOutlet weak var numberOfPeople: UILabel!
+    //總金額
+    @IBOutlet weak var totalPrice: UILabel!
+    @IBOutlet weak var oderListCellImage: UIImageView!
     var oderListCellData:UpLoadFields! //解析後的資料
     
     //cell 要顯示的資料
     func oderListCellView(){
-        oderListCellLabelView[0].text = "行程名稱：\(oderListCellData.fields.strokeName)"
-        oderListCellLabelView[1].text = "訂購人姓名:\(oderListCellData.fields.name)"
-        oderListCellLabelView[2].text = "上車地點:\(oderListCellData.fields.pickUpLocation)"
-        oderListCellLabelView[3].text = "人數:\(oderListCellData.fields.numberOfPeople)"
-        oderListCellLabelView[4].text = "總金額\(oderListCellData.fields.price)"
+        travelNameLable.text = "行程名稱：\(oderListCellData.fields.strokeName)"
+        subscriberName.text = "訂購人姓名:\(oderListCellData.fields.name)"
+        pickUpLocation.text = "上車地點:\(oderListCellData.fields.pickUpLocation)"
+        numberOfPeople.text = "人數:\(oderListCellData.fields.numberOfPeople)"
+        totalPrice.text = "總金額\(oderListCellData.fields.price)"
         //抓照片
         if let url = URL(string: "\(oderListCellData.fields.imageUrl)"){
             URLSession.shared.dataTask(with: url) { data, response, error in

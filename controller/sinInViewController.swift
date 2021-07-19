@@ -16,8 +16,12 @@ class sinInViewController: UIViewController {
     //密碼輸入
     @IBOutlet weak var sinInPassWordTextField: UITextField!
     
+    @IBOutlet weak var fbSinInButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     
@@ -63,7 +67,6 @@ class sinInViewController: UIViewController {
             print("\(user.providerID)登入")
             if user.providerID.count > 0{
                 let userInfo = user.providerData[0]
-                print("使用者名稱",userInfo.email,"目前是登入狀態喔")
                 //判斷如果已經登入，直接跳到list頁面
                     if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
                         controller.modalPresentationStyle = .fullScreen
@@ -76,6 +79,7 @@ class sinInViewController: UIViewController {
     }
     //fb登入
     func fbLogIn(){
+
         let manager = LoginManager()
         manager.logIn(permissions: [.publicProfile], viewController: self) { (result) in
             if case LoginResult.success(granted: _, declined: _, token: _) = result {
@@ -106,8 +110,8 @@ class sinInViewController: UIViewController {
     //FB登入
     @IBAction func fbSinIn(_ sender: UIButton) {
         fbLogIn()
+        
     }
-//    
     //開始按鈕
     @IBAction func sinIn(_ sender: UIButton) {
         emailSinIn()

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-te-vNR">
-                                <rect key="frame" x="100" y="575" width="228" height="97"/>
+                                <rect key="frame" x="100" y="575" width="228" height="103"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-7S-vsd">
                                         <rect key="frame" x="83.666666666666657" y="0.0" width="61" height="48"/>
@@ -31,8 +31,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcS-NS-kjr">
-                                        <rect key="frame" x="89.666666666666657" y="67" width="49" height="30"/>
-                                        <state key="normal" title="FB登入"/>
+                                        <rect key="frame" x="82" y="67" width="64" height="36"/>
+                                        <color key="backgroundColor" red="0.92855814199999998" green="0.64660257409999999" blue="0.33165538550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="FB登入">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="fbSinIn:" destination="WON-qf-DJF" eventType="touchUpInside" id="pLs-hn-K3X"/>
                                         </connections>
@@ -117,6 +121,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vtN-w4-LG9"/>
                     <connections>
+                        <outlet property="fbSinInButton" destination="FcS-NS-kjr" id="xmr-sb-9Gl"/>
                         <outlet property="sinInEmailTextField" destination="ao9-e9-k6a" id="g8i-Pr-NFc"/>
                         <outlet property="sinInPassWordTextField" destination="Lr8-6v-jdN" id="lkc-zz-M2X"/>
                     </connections>
@@ -671,12 +676,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="numberOfPeople" destination="L2X-NI-qdJ" id="Hao-PN-ABq"/>
                                     <outlet property="oderListCellImage" destination="pjU-zF-yty" id="Ktf-1m-0Es"/>
-                                    <outletCollection property="oderListCellLabelView" destination="aQo-KR-BvG" collectionClass="NSMutableArray" id="fJw-rl-Oea"/>
-                                    <outletCollection property="oderListCellLabelView" destination="PhE-9R-rda" collectionClass="NSMutableArray" id="nE0-J0-1Nu"/>
-                                    <outletCollection property="oderListCellLabelView" destination="QYI-UK-TcU" collectionClass="NSMutableArray" id="57G-IH-EII"/>
-                                    <outletCollection property="oderListCellLabelView" destination="L2X-NI-qdJ" collectionClass="NSMutableArray" id="BRJ-9M-xT8"/>
-                                    <outletCollection property="oderListCellLabelView" destination="WAv-Se-Zak" collectionClass="NSMutableArray" id="FEz-Ah-71m"/>
+                                    <outlet property="pickUpLocation" destination="QYI-UK-TcU" id="ukd-kX-Dbv"/>
+                                    <outlet property="subscriberName" destination="PhE-9R-rda" id="GVL-bC-3D4"/>
+                                    <outlet property="totalPrice" destination="WAv-Se-Zak" id="t1P-n5-jt7"/>
+                                    <outlet property="travelNameLable" destination="aQo-KR-BvG" id="cra-w3-IkJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
