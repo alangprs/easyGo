@@ -1,6 +1,9 @@
 # easyGo
 小羽旅遊
 
+![image](https://github.com/alangprs/easyGo/blob/master/showImage/app介紹基本首頁圖.001.png)
+
+- 7/20 新增刪除功能
 
 
 - GIF
