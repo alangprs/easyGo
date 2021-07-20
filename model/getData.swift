@@ -12,7 +12,6 @@ struct GETResponse:Decodable {
 }
 struct Records:Decodable {
     let fields:Fields
-    let id:String
     
 }
 struct Fields:Decodable {

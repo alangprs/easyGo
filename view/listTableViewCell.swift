@@ -8,7 +8,7 @@
 import UIKit
 
 class listTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var listImage: UIImageView!
     @IBOutlet weak var listLable: UILabel!
     
@@ -31,7 +31,7 @@ class listTableViewCell: UITableViewCell {
             }
         }.resume()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

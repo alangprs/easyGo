@@ -1,19 +1,20 @@
 //
-//  uploadData.swift
+//  OrderDataProcess.swift
 //  easyGo
 //
-//  Created by 翁燮羽 on 2021/6/27.
-//訂單資料上傳
+//  Created by 翁燮羽 on 2021/7/20.
+// 訂單顯示、刪除
 
 import Foundation
 
-struct UpLoadResponse:Codable {
-    let records:[UpLoadFields]
+struct OrderDataProcessResponse:Codable {
+    let records:[OrderDataProcess]
 }
-struct UpLoadFields:Codable {
-    let fields:UpLoadData
+struct OrderDataProcess:Codable {
+    let fields:DataProces
+    let id:String
 }
-struct UpLoadData:Codable {
+struct DataProces:Codable {
     let name:String
     let price:Int
     let tirpDate:String
@@ -27,7 +28,3 @@ struct UpLoadData:Codable {
     let imageUrl:URL
 
 }
-
-
-
-

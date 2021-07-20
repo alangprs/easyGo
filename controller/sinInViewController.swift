@@ -58,9 +58,9 @@ class sinInViewController: UIViewController {
     }
     //fb
     func logIn(permissions: [Permission] = [.publicProfile],
-                     viewController: UIViewController? = nil,
-                     completion: LoginResultBlock? = nil){
-        }
+               viewController: UIViewController? = nil,
+               completion: LoginResultBlock? = nil){
+    }
     //取得使用者資訊
     func getProvider(){
         if let user = Auth.auth().currentUser{
@@ -68,9 +68,9 @@ class sinInViewController: UIViewController {
             if user.providerID.count > 0{
                 let userInfo = user.providerData[0]
                 //判斷如果已經登入，直接跳到list頁面
-                    if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
-                        controller.modalPresentationStyle = .fullScreen
-                        present(controller, animated: true, completion: nil)
+                if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
+                    controller.modalPresentationStyle = .fullScreen
+                    present(controller, animated: true, completion: nil)
                 }
             }else{
                 print("取得使用者資訊失敗")
@@ -79,11 +79,11 @@ class sinInViewController: UIViewController {
     }
     //fb登入
     func fbLogIn(){
-
+        
         let manager = LoginManager()
         manager.logIn(permissions: [.publicProfile], viewController: self) { (result) in
             if case LoginResult.success(granted: _, declined: _, token: _) = result {
-                            print("fb login ok")
+                print("fb login ok")
                 let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
                 Auth.auth().signIn(with: credential) { [weak self] (result, error) in
                     guard let self = self else {return}
@@ -96,7 +96,7 @@ class sinInViewController: UIViewController {
                     self.getProvider()
                     //判斷如果已經登入，直接跳到list頁面
                     if let controller = self.storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
-                            controller.modalPresentationStyle = .fullScreen
+                        controller.modalPresentationStyle = .fullScreen
                         self.present(controller, animated: true, completion: nil)
                     }
                     
@@ -125,15 +125,15 @@ class sinInViewController: UIViewController {
         }
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

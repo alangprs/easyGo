@@ -3,7 +3,7 @@
 //  easyGo
 //
 //  Created by 翁燮羽 on 2021/6/28.
-//
+//訂購清單顯示
 
 import UIKit
 
@@ -20,7 +20,7 @@ class oderListTableViewCell: UITableViewCell {
     //總金額
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var oderListCellImage: UIImageView!
-    var oderListCellData:UpLoadFields! //解析後的資料
+    var oderListCellData:OrderDataProcess! //解析後的資料
     
     //cell 要顯示的資料
     func oderListCellView(){
@@ -45,12 +45,12 @@ class oderListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
     }
-
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }

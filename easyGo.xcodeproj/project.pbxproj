@@ -16,6 +16,7 @@
 		4D65A1E72684B6B700783BC5 /* getData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D65A1E62684B6B700783BC5 /* getData.swift */; };
 		4D66FA7D268823C1001BFD65 /* uploadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D66FA7C268823C1001BFD65 /* uploadData.swift */; };
 		4D66FA8126882438001BFD65 /* infoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D66FA8026882438001BFD65 /* infoData.swift */; };
+		4D8867AB26A6903C00F70DD5 /* OrderDataProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8867AA26A6903C00F70DD5 /* OrderDataProcess.swift */; };
 		4DA88AD32689E42C0006E411 /* oderListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88AD22689E42C0006E411 /* oderListTableViewController.swift */; };
 		4DA88AD7268A279D0006E411 /* oderListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */; };
 		4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE4A3D42681B5B60084D587 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		4D65A1E62684B6B700783BC5 /* getData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getData.swift; sourceTree = "<group>"; };
 		4D66FA7C268823C1001BFD65 /* uploadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadData.swift; sourceTree = "<group>"; };
 		4D66FA8026882438001BFD65 /* infoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = infoData.swift; path = model/infoData.swift; sourceTree = SOURCE_ROOT; };
+		4D8867AA26A6903C00F70DD5 /* OrderDataProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDataProcess.swift; sourceTree = "<group>"; };
 		4DA88AD22689E42C0006E411 /* oderListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oderListTableViewController.swift; sourceTree = "<group>"; };
 		4DA88AD6268A279D0006E411 /* oderListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oderListTableViewCell.swift; sourceTree = "<group>"; };
 		4DE4A3D12681B5B60084D587 /* easyGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 				4D66FA7C268823C1001BFD65 /* uploadData.swift */,
 				4D66FA8026882438001BFD65 /* infoData.swift */,
 				4D448FAC26A5A89B00BE44CC /* location.swift */,
+				4D8867AA26A6903C00F70DD5 /* OrderDataProcess.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				4D448FAD26A5A89B00BE44CC /* location.swift in Sources */,
 				4D65A19426831F2100783BC5 /* joinViewController.swift in Sources */,
 				4DA88AD7268A279D0006E411 /* oderListTableViewCell.swift in Sources */,
+				4D8867AB26A6903C00F70DD5 /* OrderDataProcess.swift in Sources */,
 				4D65A1E72684B6B700783BC5 /* getData.swift in Sources */,
 				4DE4A3EC2681B5DF0084D587 /* sinInViewController.swift in Sources */,
 				4DE4A3D52681B5B60084D587 /* AppDelegate.swift in Sources */,
