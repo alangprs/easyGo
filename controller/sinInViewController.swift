@@ -23,8 +23,6 @@ class sinInViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
-    
     //彈跳出通知
     func texAlert(title:String,message:String){
         let conertller = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -64,7 +62,6 @@ class sinInViewController: UIViewController {
     //取得使用者資訊
     func getProvider(){
         if let user = Auth.auth().currentUser{
-            print("\(user.providerID)登入")
             if user.providerID.count > 0{
                 _ = user.providerData[0]
                 //判斷如果已經登入，直接跳到list頁面
@@ -120,20 +117,9 @@ class sinInViewController: UIViewController {
     //會員註冊按鈕
     @IBAction func joinEmail(_ sender: UIButton) {
         if let controller = storyboard?.instantiateViewController(withIdentifier: "\(joinViewController.self)"){
-            controller.modalPresentationStyle = .fullScreen //變成全畫面模式
             present(controller, animated: true, completion: nil)
         }
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

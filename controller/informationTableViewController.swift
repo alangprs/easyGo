@@ -40,7 +40,7 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
     //上車地點
     let pickerViewItem = [Location.新莊棒球場售票口對面,Location.三重爭鮮,Location.蘆洲區公所,Location.永平市場]
     
-    var infoData:InfoData //接odery 資料
+    var infoData:InfoData! //接odery 資料
     init?(coder:NSCoder,infoData:InfoData) {
         self.infoData = infoData
         super.init(coder: coder)
@@ -74,7 +74,17 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
         enterInfo[4].inputView = datePicker //dateTextfield點下去時跳出datePicker選單
         enterInfo[4].inputAccessoryView = createToolBar() //執行工具
     }
-    
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        UpinfoDataView() //畫面出現時一開始要顯示的內容
+        createDatePicker()//執行datePicker
+        //pickerview 相關資料載入
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        enterInfo[5].inputView = pickerView //顯示pickerView
+        self.sendOutUI.layer.cornerRadius = 15 //設定送出按鍵圓角
+    }
     
     //畫面出現時一開始要顯示的內容
     func UpinfoDataView(){
@@ -83,17 +93,6 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
         infoTripData[1].text = "人數:\(infoData.peopleSanderValue)人"
         infoTripData[2].text = infoData.tirpDate
         infoTripData[3].text = "總金額:\(infoData.priceSum)元"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        UpinfoDataView()
-        createDatePicker()//執行datePicker
-        //pickerview 相關資料載入
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        enterInfo[5].inputView = pickerView //顯示pickerView
-        self.sendOutUI.layer.cornerRadius = 15 //設定送出按鍵圓角
     }
     
     //資料上傳
@@ -140,7 +139,7 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
            enterInfo[5].text != ""{
             upLoad()
             //跳到訂單頁面
-            if let controller = storyboard?.instantiateViewController(withIdentifier: "oderListTableViewController"){
+            if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
                 controller.modalPresentationStyle = .fullScreen //全螢幕
                 present(controller, animated: true, completion: nil)
             }

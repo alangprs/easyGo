@@ -77,6 +77,7 @@ class oderListTableViewController: UITableViewController {
     }
     
     
+    //顯示cell內容
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(oderListTableViewCell.self)", for: indexPath) as? oderListTableViewCell else{return UITableViewCell()}
         cell.oderListCellData = oderListData[indexPath.row]
