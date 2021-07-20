@@ -117,7 +117,7 @@ class informationTableViewController: UITableViewController, UIPickerViewDelegat
                         self.tableView.reloadData()
                     }
                 }else{
-                    print("上傳資料失敗",error)
+                    print("上傳資料失敗",error as Any)
                 }
             }.resume()
         }

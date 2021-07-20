@@ -35,12 +35,12 @@ class sinInViewController: UIViewController {
     //mail 登入
     func emailSinIn(){
         Auth.auth().signIn(withEmail: sinInEmailTextField.text!, password: sinInPassWordTextField.text!) { result, error in
-            guard let user = result?.user else {
+            guard (result?.user) != nil else {
                 //登入失敗執行
                 if let error = error{
                     self.texAlert(title: "登入失敗", message: "\(error.localizedDescription)")
                 }
-                print("登入失敗",error?.localizedDescription)
+                print("登入失敗",error?.localizedDescription as Any)
                 return
             }
             //登入成功執行
@@ -66,7 +66,7 @@ class sinInViewController: UIViewController {
         if let user = Auth.auth().currentUser{
             print("\(user.providerID)登入")
             if user.providerID.count > 0{
-                let userInfo = user.providerData[0]
+                _ = user.providerData[0]
                 //判斷如果已經登入，直接跳到list頁面
                 if let controller = storyboard?.instantiateViewController(withIdentifier: "ListNavigation"){
                     controller.modalPresentationStyle = .fullScreen
@@ -88,7 +88,7 @@ class sinInViewController: UIViewController {
                 Auth.auth().signIn(with: credential) { [weak self] (result, error) in
                     guard let self = self else {return}
                     guard error == nil else {
-                        print("ＦＢ登入錯誤",error?.localizedDescription)
+                        print("ＦＢ登入錯誤",error?.localizedDescription as Any)
                         return
                     }
                     print("firebase登入成功")

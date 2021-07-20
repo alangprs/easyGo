@@ -30,14 +30,14 @@ class joinViewController: UIViewController {
     func startJion(){
         Auth.auth().createUser(withEmail: self.joinEmailTextField.text!, password: self.joinPassWordTextField.text!) { result, error in
             //確認取得使用者資訊
-            guard let user = result?.user,
+            guard let _ = result?.user,
                   error == nil else {
                 //註冊失敗執行
                 if let error = error{
                     self.texAlert(title: "註冊失敗", message: "\(error.localizedDescription)")
                 }
                 
-                print("印出註冊錯誤",error?.localizedDescription)
+                print("印出註冊錯誤",error?.localizedDescription as Any)
                 return
             }
             //註冊成功執行
